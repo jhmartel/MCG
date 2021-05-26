@@ -84,7 +84,9 @@ bibencoding=utf8,
 
 \maketitle
 
-This article studies an algebraic problem which we call Closing the Steinbeg symbol (CS) of the mapping class group of closed hyperbolic surfaces and specifically genus two ($g=2$). Formally solving (CS) requires finding finite subsets $I$ of $\Gamma:=MCG(\Sigma_g)$ such that the translates $\sum_{\gamma \in I}\sB.\gamma$ of a certain chain sum $\sB:=\sum_i \alpha_i$ is a nontrivial homology cycle, see [ss] for details. Solutions $I$ to (CS) which satisfy additional convexity assumptions [ref] lead to our producing candidate equivariant deformation retracts $\sT_g \leadsto \sZ$ of the Teichmueller space $\sT_g$ onto a subvariety $\sZ$. The subvariety $\sZ=\sZ_\pi$ is a closed subset of the singularity locus of an optimal semicoupling $\pi=\pi(c,\sigma, \tau)$ with respect to a source $\sigma$, target $\tau$, and cost $c$ of transporting unit source to unit target mass. Positive solutions of (CS) lead to candidate equivariant spines $\sZ$ of $\sT$ based on the Reduction-to-Singularity method of the author's thesis \cite{martel}. The deformation retracts are constructed by an auxiliary function $\eta_{avg}(x,y_0, y_1)$ representing an averaged interaction potential. [INCOMPLETE]
+This article studies an algebraic problem which we call Closing the Steinbeg symbol (CS) of the mapping class group of compact Riemann surfaces $\Sigma = \Sigma_g$. For concreteness we focus on the genus two ($g=2$) case. Formally solving (CS) requires finding finite subsets $I$ of $\Gamma:=MCG(\Sigma)$ such that the translates $\sum_{\gamma \in I}\sB.\gamma$ of a certain chain sum $\sB:=\sum_i \alpha_i$ is a nontrivial homology cycle, see \ref{CS} for details. Solutions $I$ to (CS) which satisfy additional convexity assumptions \eqref{cs} lead to our producing candidate equivariant deformation retracts $\sT_g \leadsto \sZ$ of the Teichmueller space $\sT_g$ onto a subvariety $\sZ$. The construction of these retracts and the subvariety $\sZ$ is based on the Reduction to Singularity methods of the author's thesis \cite{martel}. 
+
+%The subvariety $\sZ=\sZ_\pi$ is a closed subset of the singularity locus of an optimal semicoupling $\pi=\pi(c,\sigma, \tau)$ with respect to a source $\sigma$, target $\tau$, and cost $c$ of transporting unit source to unit target mass. Positive solutions of (CS) lead to candidate equivariant spines $\sZ$ of $\sT$ based on the Reduction-to-Singularity method of the author's thesis \cite{martel}. The deformation retracts are constructed by an auxiliary function $\eta_{avg}(x,y_0, y_1)$ representing an averaged interaction potential. [INCOMPLETE]
 
 %The bridge from solutions to (CS) to deformation retracts $\sT_g \leadsto \sZ$ is based on the ``reduction to singularity" methods of the author's thesis \cite{martel}, where we show the homotopy type of $\sZ$ is determined by an analytic criteron which we call Uniform Halfspace Condition (UHS). This requires an averaged vector potential denoted $\eta_{avg}(x,y_0,y_1)$ to be bounded away from zero uniformly with the target variables. Verifying (UHS) is a computational problem, and beyond the scope of this present article. The present article concludes with a question to [ref] concerning further computational problems in genus $g=2$.
 
@@ -145,22 +147,21 @@ Most importantly, for the mapping class group $\Gamma$, the dualizing module $\b
 
 Teichmueller's theorem that $\sT_g$ is a $(6g-6)$-dimensional cell is perhaps misleading because the $\Gamma$-equivariant topology of $\sT_g$ is highly nontrivial, and only locally resembling a $(6g-6)$ cell. The construction of $\Gamma$ equivariant metrics $d$ on $\sT$ is non canonical and there are many candidates. Popular metrics are Teichmueller's original metric $d_{Teich}$ \cite{hubbard},  Weil-Peterson's metric $d_{WP}$ \cite{hubbard}, Thurston's metric \cite{wolpert1986a}, or McMullen's \cite{mcmullen2000moduli}. 
 
-For a choice of invariant Riemannian metric $d$ on $\sT$ and invariant function $t: \sC^0 \to \bR_{>0}$, we define an excision $\sT[t]$ of $\sT$ by excising (``scooping out") convex horoballs centred at various points at infinity. Our method distinguishes the $\Gamma$-rational horoball excisions with the further property of having $\Gamma$-invariant boundary horospheres. We further emphasize those parameters $t$ which are sufficiently small, in which case the excisions $\sT[t]$  have a $\Gamma$-equivariant topological boundary $\del \sT[t]$ with the homotopy-type of $\sC$. This important fact implies a canonical isomorphism $$\bD\approx \tilde{H}_*(\del \sT[t]; \bZ).$$ For the constructive topologist the $\Gamma$-action on $\sT$ is more accesible than the abstract algebraic action on $\bD$. The homologically essential spheres of $\sC$ can be viewed as spheres at-infinity within the excision $\sT[t]$. The $\Gamma$-orbit of these spheres and their singular chain sums generates an important topological $\bZ \Gamma$-module called the \emph{Steinberg module}. Following convention we designate the generator of this module a Steinberg symbol $B$, c.f. ``modular symbols" in \cite{AR}, \cite{AGM}, \cite{Stein}, \cite{Sol}, and references therein. 
+For a choice of invariant Riemannian metric $d$ on $\sT$ and invariant function $t: \sC^0 \to \bR_{>0}$, we define an excision $\sT[t]$ of $\sT$ by excising (``scooping out") convex horoballs centred at various points at infinity. Our method distinguishes the $\Gamma$-rational horoball excisions which enjoy the further property of having $\Gamma$-invariant boundary horospheres. Thus $\Gamma$ acts proper discontinuously on both $\sT[t]$ and $\del \sT[t]$. We further emphasize those parameters $t$ which are sufficiently small, in which case the excisions $\sT[t]$  have a $\Gamma$-equivariant topological boundary $\del \sT[t]$ with the homotopy-type of $\sC$. This important fact implies a canonical isomorphism $$\bD\approx \tilde{H}_*(\del \sT[t]; \bZ).$$ For the constructive topologist the $\Gamma$-action on $\sT$ is more accesible than the abstract algebraic action on $\bD$. The homologically essential spheres of $\sC$ can be viewed as spheres at-infinity within the excision $\sT[t]$. The $\Gamma$-orbit of these spheres and their singular chain sums generates an important topological $\bZ \Gamma$-module called the \emph{Steinberg module}. Following convention we designate the generator of this module a Steinberg symbol $B$, c.f. ``modular symbols" in \cite{AR}, \cite{AGM}, \cite{Stein}, \cite{Sol}, and references therein. 
 
-The contractibility of $\sT[t]$, $\sT$, and the long exact sequence in relative homology implies the natural boundary morphism [formula] is an isomorphism. However, what we require for applications is an inverse operation which is well-defined directly on singular chains. This inverse operation is a \emph{filling} operation and requires a choice of metric $d'$. For our applications, any metric $d'$ with the following properties would be desirable:
+The contractibility of $\sT[t]$, $\sT$, and the long exact sequence in relative homology implies the natural boundary morphism $$\delta: C_*(\sT[t], \del \sT[t]) \to C_{*-1}(\del \sT[t])$$ is an isomorphism. Here $C_*$ denotes the singular chain groups. However what we require for applications is an inverse operation which is well-defined directly on singular chains, namely $$FILL:=\delta^{-1}: C_{*-1}(\del \sT[t]) \to C_*(\sT[t], \del \sT[t])$$. This inverse operation is a \emph{filling} operation and requires a choice of metric $d'$. For our applications, any metric $d'$ with the following properties would be desirable:
 \begin{itemize}
 \item[(M1)] the metric $d'$ is metrically complete and proper in the interior of $\sT$;
-\item[(M2)] the metric has nonpositive sectional curvature $(\kappa \leq 0)$;
+\item[(M2)] the metric has nonpositive sectional curvature $(\kappa \leq 0)$ in $\sT$;
 \item[(M3)] the $(2g-2)$-dimensional spheres generating the Steinberg symbol at infinity admits a unique $d'$-flat filling $(\kappa =0)$ to relative cycles in $(\sT[t], \del \sT[t])$.
 \end{itemize}
 
-The WP metric has properties (M1), (M2). The author does not know if (M3) holds, although \cite{FarbRank} appears to suggest otherwise. We observe that (M2) has the important consequence that WP-horoballs are geodesically convex in $(\sT, d_{WP})$, \cite{GroCurv}.
+If we examine the usual metrics, we find the WP metric has properties (M1), (M2). The author does not know if (M3) holds, although \cite{FarbRank} appears to suggest otherwise. We observe that (M2) has the important consequence that WP-horoballs are geodesically convex in $(\sT, d_{WP})$, \cite{GroCurv}. 
 
 With respect to Teichmuller's original metric, we know (a) holds, but (b) fails and Teichmueller's original metric has regions of positive curvature. Moreover recent work of \cite{RafiBourque} shows that ``convex hull" constructions are not possible in Teichmueller's metric.
 
-The reduction to singularity method of \cite{martel} does not strictly need flatness in property (M3) -- what is essential is rather the \emph{geometric uniqueness} of such fillings. Any metric $d'$ satisfying the properties (M123) on $\sT$ would readily lead to the existence of equivariant homotopy reductions of $\sT$ onto a spine $\sZ$ according to \cite{martel}. 
+When (M3) holds, the Steinberg symbol $B$ canonically fills to a flat relative cycle $(P, \del P)$ in $(\sT[t], \del \sT[t])$, and we call the flat relative cycles $P=FILL[B]$ ``panels". The motivation for the terminology is given in \S \eqref{CS} below. The panels are homologically nontrivial relative cycles in $\sT[t]$ modulo the boundary $\del \sT[t]$. The reduction to singularity method of \cite{martel} does not strictly need flatness in property (M3) -- what is essential is rather the \emph{geometric uniqueness} of such fillings. Any metric $d'$ satisfying the properties (M123) on $\sT$ would readily lead to the existence of equivariant homotopy reductions of $\sT$ onto a candidate spine $\sZ$ according to \cite{martel}. 
 
-When (M3) holds, the Steinberg symbol $B$ canonically fills to a flat relative cycle $(P, \del P)$ in $(\sT[t], \del \sT[t])$, and we call the flat relative cycles $P=FILL[B]$ ``panels". The motivation for the terminology is given in \S \eqref{CS} below. The panels are homologically nontrivial relative cycles in $\sT[t]$ modulo the boundary $\del \sT[t]$. 
 
 The following is very important lemma for our method:
 
@@ -171,7 +172,9 @@ Let $d'$ be a metric on $\sT$ satisfying properties $(M123)$. Let $\sT[t]$ be a 
 
 \end{proof}
 
-The existence of parabolic elements $\gamma$ in $\Gamma$ on the other hand, shows that asymptotically as $t\to 0^+$ the relative cycle $P$ and its translates $P.\gamma$ have nontrivial intersection ``at infinity". However, with respect to an equivariant rational parameter $t$, there is no self intersection in the interior of the space.
+To motivate Lemma \ref{kl}, recall the familiar fact that if $\Sigma$ is a closed hyperbolic surface, and $\alpha$ is a closed geodesic on $\Sigma$, then the lifts $\tilde{\alpha}$ of $\alpha$ to the universal covering $\tilde{\Sigma}$ form a $\pi_1(\Sigma)$ orbit in $\tilde{\Sigma}$ where all the translates are disjoint. Likewise Lemma \ref{kl} asserts that the $\Gamma$-translates of $P$ are disjoint in the interior of $\sT[t]$, and the quotient $\sT[t] \to \sT[t]/\Gamma$ maps $P$ isometrically onto its image.
+
+The existence of parabolic elements $\gamma$ in $\Gamma$ on the other hand, shows that asymptotically as $t\to 0^+$ the relative cycle $P$ and its translates $P.\gamma$ have intersections ``at infinity". However with respect to an equivariant rational parameter $t$, there is no self intersection in the \emph{interior} of $\sT[t]$.
 
 %Wolpert [ref] has important formulas describing gradients of WP distance function. 
 
@@ -181,7 +184,7 @@ The existence of parabolic elements $\gamma$ in $\Gamma$ on the other hand, show
 
 
 \section{Closing Steinberg}\label{CS}
-The problem of Closing Steinberg is informally related to stitching a closed football $F$ from a sequence of panels $\{P_i\}_{i\in I}$. The panels $P_i$ are required to have the property that $F=conv\{P_i|~i\in I\}$ and such that $\sum_{i\in I} \del P_i=0$ over $\bZ/2\bZ$-coefficients. In otherwords, the problem requires finding a sequence of panels $P_i, i\in I$ which ``triangulate" (in a convex sense) a compact convex subset $F$ as defined above. The panels $P=P_i$ of the above footballs are comparable to the flat-filled Steinberg symbols $P=FILL[B]$ and their translates $B.\gamma$, $\gamma\in \Gamma$. Compare Figure \ref{nikeball}.
+The problem of Closing Steinberg is informally related to stitching a closed football $F$ from a sequence of panels $\{P_i\}_{i\in I}$. The panels $P_i$ are required to have the property that $F=conv\{P_i|~i\in I\}$ and such that $\sum_{i\in I} \del P_i=0$ over $\bZ/2\bZ$-coefficients. In otherwords, the problem requires finding a sequence of panels $P_i, i\in I$ which assemble to a closed compact convex subset $F$ as defined above. The panels $P=P_i$ of the above footballs are analogous to the flat-filled Steinberg symbols $P=FILL[B]$ and their translates $B.\gamma$, $\gamma\in \Gamma$. Compare Figure \ref{nikeball}.
 
  %where $\bD:=\tilde{H}_\nu (\sT[t]; \del \sT[t])$ is the reduced singular homology group of the excision model $\sT[t]$ constructed above, and $\underline{\bZ}/2$ is the 
 
@@ -207,7 +210,7 @@ vanishes over $\bZ/2$-coefficients in the homology group $[\del \xi]=0$ in $H_q(
 
 \textbf{(iii: well-defined convex hull)} the boundary-chain representing $\del \xi$ is simultaneously visible from an interior point $x$ in $\sT[t]$;
 
-\textbf{(iv: well-separated gates)} there exists a finite-index subgroup $\Gamma' < \Gamma$ such that the chain sum $\uF=\sum_{\gamma \in \Gamma'}F.\gamma$ has nonempty well-separated gates structure precisely equal to the principal orbit $\{P.\gamma ~|~ \gamma\in \Gamma'\}$.
+\textbf{(iv: well-separated gates)} there exists a finite-index subgroup $\Gamma' < \Gamma$ such that the chain sum $\uF=\sum_{\gamma \in \Gamma'}F.\gamma$ has nonempty \emph{well-separated gates} precisely equal to the principal orbit $\{P.\gamma ~|~ \gamma\in \Gamma'\}$. 
 %the translates $B.\gamma$, per $\gamma\in I$, are geometrically disjoint in $X[t]$.
 \end{dfn}
 
@@ -215,8 +218,9 @@ Our definition of Closing Steinberg was inspired by the author's study of \cite{
 
 
  %Cremona successfully Closes Steinberg in several cases for $\Gamma=GL(\mathscr{O}_{\sqrt{-d}})$, where $\mathscr{O}_{\sqrt{-d}}$ is the ring of integers of some Euclidean complex quadratic fields. 
-The hypotheses (i)--(ii) basically require the chain sum $\xi$ to be nonzero mod $2$. The hypotheses (iii)--(iv) are ``convex" assumptions, and which need be verified for any nonzero chain. The hypothesis of well-separated gates is related to the following fact: the translates $P, P.\gamma$, for $\gamma\in \Gamma$, are either identical or geometrically disjoint in $\sT[t]$ according to Lemma \ref{kl}. However the translates $P, P.\gamma$ may have nontrivial intersection at infinity in the initial Teichmueller space $\sT$. In fact the problem of (CS) is precisly to find such nontrivial intersections at infinity, although the intersections are disjoint in $\sT[t]$.
+The hypotheses (i)--(ii) basically require the chain sum $\xi$ to be nonzero mod $2$. The hypotheses (iii)--(iv) are ``convex" assumptions, and which need be verified for any nonzero chain. The hypothesis of well-separated gates is related to the following fact: the translates $P, P.\gamma$, for $\gamma\in \Gamma$, are either identical or geometrically disjoint in $\sT[t]$ according to Lemma \ref{kl}. However the translates $P, P.\gamma$ may have nontrivial intersection at infinity in the initial Teichmueller space $\sT$. In fact the problem of (CS) is precisly to find such nontrivial intersections at infinity, although again the intersections are disjoint in the interior of $\sT[t]$.
 
+%Moreover the convexity assumptions are nontrivial, and require a new metric on $\sT$. For indeed we should require the metric to be nonpositively curved
 
 
 
@@ -232,6 +236,8 @@ The hypotheses (i)--(ii) basically require the chain sum $\xi$ to be nonzero mod
 
 %\subsection{}
 %[Curve Complex][Broaddus, duality][Steinberg module]
+
+
 %(Action on Steinberg Symbols) The curve complex consists of simple closed curves $\gamma$ on $\Sigma$. The free homotopy class $[\gamma]$ corresponds to a conjugacy class in $\pi_1$. Therefore the curve complex consists of a special subset of ``simple" conjugacy classes $[\gamma]$. The algebraic characterization of those conjugacy classes which represent simple curves appears difficult problem [ref]. Obviously the mapping classes $\Gamma$ act by translation on the conjugacy classes, and coincides to the action of $\Gamma$ on $CC$ (simple closed curves). 
 %Question: How to symbolically represent the conjugacy classes? Given a faithful linear representation $\rho$ of $\pi$, how to represent conjugacy classes? 
 %Problem: Want to formally (CS) on computer. How to find translates of the Steinberg symbol? [Aramayona-Leininger, Birman-Broaddus-Leininger]
@@ -259,7 +265,7 @@ The hypotheses (i)--(ii) basically require the chain sum $\xi$ to be nonzero mod
 %Explicit constructions of fundamental domains for the action $\sT \times \Gamma \to \sT$ is practically impossible, and requires precise knowledge of generators and relations in $\Gamma$. Acknowledging our imperfect \`a priori knowledge of $\Gamma$, we introduced the definition of ``Closing the Steinberg symbol" in [ref], abbreviated (CS). 
 
 
-\section{Open Problem: Genus Two Mapping Class Group}
+\section{Open Problem: (CS) for Genus 2}
 To illustrate our ideas, we now study the case of genus two closed Riemann surface. The duality theory of mapping class groups $\Gamma=MCG(\Sigma_g)$ for genus $g=2$ has been described by \cite{Broaddus2012}. For reference we include the following figure taken from \cite[Fig.10]{Broaddus2012}, see \eqref{br}.%Let $B$ be Broaddus' two-sphere in the curve complex $\sC$. 
 
 \begin{figure}\label{br}
@@ -290,24 +296,48 @@ Remark. Obviously the group structure of $\Gamma$ allows us to restrict ourselve
 
 To illustrate, let the reader observe that a typical element $\phi\in MCG$ will \emph{totally displace} the curves in $\sB$ such that $\sB \cap \sB.\phi=\emptyset$ for almost every $\phi\in MCG$. On the other hand, if $\phi'$ permutes the curves such that $\sB.\phi=\sB$, then $I=\{Id,\phi'\}$ would be a solution of \eqref{bb}. However we consider this solution to be trivial in the following sense: the formal sum $[\sB]+[\sB].\phi'=2[\sB]=0$ is itself vanishing mod $2$. Such trivial solutions are avoided in the case of higher genus closed surfaces as the work of \cite{birman2013finite} demonstrates, i.e. the identity element is the only mapping class which permutes $\sB$. Obviously parabolic type elements $\phi$, i.e. curve stabilizers $\phi\in MCG_\gamma$ satisfy$\sB \cap \sB.\phi \supset \{\gamma\}$. So naturally one is tempted to find formal solutions to (CS) by choosing a suitable sequence of parabolics. 
 
-It is possible that finite subgroups of $\Gamma$ provide convenient solutions $I$ to (CS) in higher genus, as the examples in \cite{Cremona} demonstrate. For the basic arithmetic group $\Gamma=PGL(\bZ^2)$, a convenient solution to (CS) is given by $$I_0=\{Id, \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}, \begin{pmatrix} 0 & 1 \\ -1 & 2 \end{pmatrix}\}.$$ Thus the chain sum $$\xi:= 
-(\begin{bmatrix} 1 \\ 0 \end{bmatrix} \otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix}) + 
-(\begin{bmatrix} 0 \\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\ 1 \end{bmatrix}) +
-(\begin{bmatrix} 1 \\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}) $$ represents a nontrivial $0$-cycle $\xi \in H_0(PGL(\bZ^2) , \bZ_2 \otimes \textbf{D})$, where $\textbf{D}$ is the dualizing $\bZ PGL(\bZ^2)$-module $\approx H_1(Proj[\del Q[t]]; \bZ)$. So $\del_0 \xi=0$ where $\del_0$ is the chain boundary operator. The reader can consult \cite[]{martel}. 
+It is possible that finite subgroups of $\Gamma$ provide convenient solutions $I$ to (CS) in higher genus, as the examples in \cite{Cremona} demonstrate. The structure of finite subgroups in the genus $g=2$ mapping class group is however too limited. Thus we are forced to search out solutions to (CS) directly. While \eqref{bb} provides an explicit symbolic statement of (CS), it remains difficult to actually search for such solutions. The problem is to represent the action of the mapping class group on the simplicial curve complex $\sC$. The curve complex $\sC$ consists of free homotopy classes of simple closed curves $\alpha$ on $\Sigma$. The free homotopy class $[\alpha]$ corresponds to a conjugacy class in $\pi_1$. Therefore the curve complex consists of a special subset of ``simple" conjugacy classes $[\gamma]$. The algebraic characterization of those conjugacy classes which represent simple curves appears difficult problem.
 
-The structure of finite subgroups in the genus $g=2$ mapping class group is however too limited. Thus we are forced to search out solutions to (CS) directly.
+Here we find the question: 
 
-While \eqref{bb} provides an explicit symbolic statement of (CS), it remains difficult to actually search for such solutions. The problem is to represent the action of the mapping class group on the simplicial curve complex $\sC$. Here we find several problems: 
+-\emph{How to symbolically compute the $\Gamma$-action $[\alpha] . \phi$ on $\sC$?} 
 
-- how to represent the vertices of $\sC$ symbolically?
+To answer the above question would permit a brute force search for formal solutions to (CS). We would represent a neighborhood of the identity element in $\Gamma$ and then randomly search for formal solutions by directly evaluating the chain sums $\sum_\phi [\sB].\phi$ and their boundaries $\sum_\phi \del[\sB].\phi$ mod 2.
 
-- how to represent the mapping classes $\phi$ of $\Gamma=MCG$ symbolically?
+Another possibility arises though, based on Mark C. Bell's curver program \url{https://curver.readthedocs.io/en/master/index.html}. Our experimentation with curver is however limited by the fact that curver is restricted to surfaces with punctures or marked points, and is not immediately applicable to closed surfaces (although this limitation is possibly the author's own).  
 
-- how to symbolically compute the action of $\phi$ on $\sC$? 
+Finally we remark that Professor I.V Nikolaev claims to have established the \emph{linearity} of the mapping class groups of closed surfaces \cite{nikolaev2018mapping}, \cite{nikolaev2001toric}, yet we find the articles rather difficult to understand and implement, being based on some results of $AF$ $C^*$-algebras.
 
-We remark that \emph{if} the mapping class group admitted an effective linear representation, then our methods for solving (CS) for arithmetic groups could be extended.
 
-Another possibility arises though, based on Mark Bell's curver program \url{https://curver.readthedocs.io/en/master/index.html}. Our experimentation with curver is however limited by the fact that curver is restricted to surfaces with punctures or marked points, and is not immediately comparable to our setting. Finally we remark that Professor I.V Nikolaev claims to have established the \emph{linearity} of the mapping class groups of closed surfaces \cite{nikolaev2018mapping}, \cite{nikolaev2001toric}, yet we find the articles rather difficult to understand and implement, being based on some ideas from $C^*$-algebras and noncommutative geometry.
+\section{A Naive Possibility}
+The following naive possibility arises. Let $\rho:\pi \to GL_N$ be a linear finite-dimensional representation of $\pi:=\pi_1(\Sigma, pt)$ of a pointed closed Riemann surface. Let $N=N_{GL}(\rho)$ be the normalizer of the image of $\rho$ in $GL_N$. Then we find the image $Im(\rho)$ is a normal subgroup of $N$, and we obtain a quotient group $Im(\rho)\backslash N$ with a canonical homomorphism $$\chi_\rho: Im(\rho)\backslash N \to Out(\pi).$$
+
+\begin{prob}
+\label{fdrep}
+Does there exist a finite-dimensional linear representation $\rho$ of $\pi$ such that the homomorphism $\chi_\rho$ is surjective?
+\end{prob}
+
+A solution to Problem \ref{fdrep} would allow an effectively \emph{linear} representation of the elements of $MCG$. The question is whether embedding $\pi$ into a larger matrix group provides a larger class of outer automorphisms to be represented by matrix conjugation.
+
+
+\section{}
+
+
+
+
+
+
+
+%\section{}
+%We remark that \emph{if} the mapping class group admitted an effective linear representation, then our methods for solving (CS) for arithmetic groups could be extended. For the basic arithmetic group $\Gamma=PGL(\bZ^2)$, a convenient solution to (CS) is given by $$I_0=\{Id, \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}, \begin{pmatrix} 0 & 1 \\ -1 & 2 \end{pmatrix}\}.$$ Thus the chain sum $$\xi:= 
+%(\begin{bmatrix} 1 \\ 0 \end{bmatrix} \otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix}) + 
+%(\begin{bmatrix} 0 \\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\ 1 \end{bmatrix}) +
+%(\begin{bmatrix} 1 \\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\ 0 \end{bmatrix}) $$ represents a nontrivial $0$-cycle $\xi \in H_0(PGL(\bZ^2) , \bZ_2 \otimes \textbf{D})$, where $\textbf{D}$ is the dualizing $\bZ PGL(\bZ^2)$-module $\approx H_1(Proj[\del Q[t]]; \bZ)$. So $\del_0 \xi=0$ where $\del_0$ is the chain boundary operator. The reader can consult \cite[]{martel}. 
+
+
+
+%Indeed the problem of (CS) has the following form: we look for subsets $\{\alpha'\}$ of $\sC$ and want nontrivial elements $\phi\in MCG$, $\phi\neq Id$, such that the intersection $\{\alpha'\}' \cap \{\alpha'.\phi\}'$ is nonempty.
+
 
 
 
@@ -328,14 +358,17 @@ Another possibility arises though, based on Mark Bell's curver program \url{http
 %However we are yet unable to use Wolfram to identify formal solutions to [eqref]. Firstly this is because $MCG$ is not known to admit any linear representations, and secondly because we do not know how to ``encode" simple closed curves and their orbits under mapping class elements. Perhaps Thurston's train-tracks and $PML$ are the natural encoding, although we have not yet pursued this possibility.
 
 
-\section{From (CS) To Spines}
-Suppose the user succesfully Closes the Steinberg symbol, i.e. finds a finite subset $I$ of $\Gamma$ satisfying conditions \ref{cs}. In this section we indicate how candidate equivariant spines $\sZ$ of $\sT$ are produced from such solutions $I$. The complete development of these ideas is provided in our PhD thesis \cite{martel}. Briefly, solutions to (CS) allow us to replace $\sT$ and it's rational excisions $\sT[t]$ with a chain sum $\uF$ with \textit{well-separated gates}. This is a term introduced in \cite{martel}, and means $\uF=\sum_{i\in I} F_i$ is a countable chain sum of sets $F_i$ where the intersections $F_{ij}:=F_i\cap F_j$ have a well-behaved fixed geometry.
-
-In our applications the chain summands $F_i$ are convex excisions of the form $F_i=F[t]$ (see \cite{martel}). The idea is next that gated costs (see \cite{martel}[Ch.5]) are determined by their restrictions to the summands $F_i$, and also by the gates $G\subset F_i$ which are contained in the given summand. Thus we reduce the study of costs on $\sT[t]$ to localized costs defined on the summands $F_i$ and with respect to the gates $G\subset F_i$. This reduces us to the setting of \cite{martel}[Ch.6] where we studied various repulsion costs on convex excisions. 
+\section{Well-Separated Gates: From (CS) To Spines}
+Suppose the user succesfully Closes the Steinberg symbol, i.e. finds a finite subset $I$ of $\Gamma$ satisfying conditions \ref{cs}. In this section we indicate how candidate equivariant spines $\sZ$ of $\sT$ are produced from such solutions $I$. The complete development of these ideas is provided in our PhD thesis \cite{martel}. Briefly, solutions to (CS) allow us to replace $\sT$ and rational excisions $\sT[t] \subset \sT$ with a chain sum $\uF$ with \textit{well-separated gates}. This is a term introduced in \cite{martel}, and means $\uF=\sum_{i\in I} F_i$ is a countable chain sum of sets $F_i$ where the intersections $F_{ij}:=F_i\cap F_j$ have a well-behaved fixed geometry. In our applications the chain summands $F_i$ are convex excisions of the form $F_i=F[t]$ (see \cite{martel}). The idea is next that gated costs (see \cite{martel}[Ch.5]) are determined by their restrictions to the summands $F_i$, and also by the gates $G\subset F_i$ which are contained in the given summand. Thus we reduce the study of costs on $\sT[t]$ to localized costs defined on the summands $F_i$ and with respect to the gates $G\subset F_i$. This reduces us to the setting of \cite{martel}[Ch.6] where we studied various repulsion costs on convex excisions. 
 
 If $\uF$ is a chain sum with well-separated gates $\{G\}$, then the singularity locus $\sZ$ naturally decomposes as a chain sum $\sZ=\sum_i \sZ \cap F_i$, and where $\sZ \cap F_i$ is the singularity locus of a restricted semicoupling program, with respect to the restricted cost $c|F_i$, c.f. \cite{martel}[Ch.5]. Best results are obtained with costs satisfying Properties (D0)--(D4) and we conjecture that the visibility costs satisfy (D0)--(D4) using the notation of \cite{martel}. Finally using the reduction to singularity methods of \cite{martel}, we naturally construct continuous deformation retracts and which even assemble to global continuous retracts $\sT \leadsto \sZ$. Generally $\sZ$ has large codimension in $\sT$ (depending on so-called Uniform Halfspace Conditions). Symmetries in the excision boundary (and target measure) on $\del \sT[t]$ increases the maximal codimension of $\sZ$ with the possibility of attaining the extreme codimension, even the equivariant spine of $\sT$. Here there is much to say, but we go no further in this article.
 
+\section{On Canonical Geometric $E\Gamma$ models.}
+Our thesis \cite{martel} studied the importance of using different models for various $E\Gamma$ classifying spaces. So what is the best model of Teichmueller's space $\sT$? Indeed this article has not yet formally defined the \emph{points} of $\sT$, neither have we defined the action of $\Gamma=MCG(\Sigma)$ on $\sT$. 
 
+
+
+%The discovery of models of hyperbolic geometry in the careers of Gauss, Lobachevsky, \etc, is enormous discovery for the human mind. And especially the proper discontinuous actions of $PGL(\bZ^2)$ on the unit two dimensional disk $D^2$. The incredible formula $$z.\begin{pmatrix} a & b // c & d \end{pmatrix}:=(az+b)(cz+d)^{-1}$$ describing the group of Mobius transformations on the complex plane. It is further incredible that the Mobius group acts by conformal transformation (holomorphically) on $z$ (i.e. the above formula has no terms involving $\bar{z}$ in any power series representation). %How to make the action of $PGL(\bZ^2)$ on the disk as 
  
 
 
