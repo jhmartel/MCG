@@ -1,4 +1,4 @@
-# MCG
+# Mapping Class Groups, Closing the Steinberg Symbol, and Spines.
 
 The article MCG.pdf includes some of our research into the mapping class group of closed hyperbolic surfaces. We are looking to apply the reduction to singularity method from our PhD thesis to constructing equivariant spines for the Teichmueller space hyperbolic surfaces. To apply our reduction method requires we solve a computational subprogram we call "Closing the Steinberg Symbol" (CS). Solutions of Closing Steinberg (CS) are finite subsets I of MCG. 
 
