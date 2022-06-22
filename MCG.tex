@@ -47,6 +47,7 @@ bibencoding=utf8,
 \newtheorem{cor}[thm]{Corollary}
 \newtheorem{question}[thm]{Question}
 \newtheorem*{hyp}{Hypothesis}
+\newtheorem*{thmm}{Theorem}
 \theoremstyle{definition}
 \newtheorem{dfn}[thm]{Definition}
 \newtheorem{exx}[thm]{Example}
@@ -67,7 +68,7 @@ bibencoding=utf8,
 \newcommand{\sE}{\mathscr{E}}
 \newcommand{\mR}{\bR^\times_{>0}}
 \newcommand{\hh}{\hookleftarrow}
-\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bD}{\textbf{D}}
 \newcommand{\Gm}{\mathbb{G}_m}
 \newcommand{\uF}{\underline{F}}
 \newcommand{\sC}{\mathscr{C}}
@@ -75,17 +76,18 @@ bibencoding=utf8,
 \newcommand{\sT}{\mathscr{T}}
 \newcommand{\sW}{\mathscr{W}}
 \newcommand{\sZ}{\mathscr{Z}}
+\newcommand{\sP}{\mathscr{P}}
 
 \begin{document}
 
-\title{Closing Steinberg Symbols of the Mapping Class Group: Open Questions}
+\title{Closing Steinberg Symbols of the Mapping Class Group}
 \author{J. H. Martel}
 \date{\today}
 \email{jhmartel@protonmail.com}
 \maketitle
 
 \begin{abstract}
-This article studies an algebraic problem we call Closing the Steinbeg symbol (CS) of the mapping class group $\Gamma:=MCG(\Sigma)$ of compact hyperbolic surfaces $\Sigma = \Sigma_g$. Formally solving (CS) requires finding finite subsets $I$ of $\Gamma$ which satisfy an algebraic subset sum condition, namely that the translates $\sum_{\gamma \in I}\sB.\gamma$ of a certain chain sum $\sB:=\sum_i \alpha_i$ need represent a nontrivial homology cycle, see \S \ref{CS} for details. When formal solutions $I$ to (CS) satisfy further metric convexity properties relative to a geometric model $X:=\sT_g$ of Teichmueller space, then we obtain an interesting supply of candidate equivariant deformation retracts $X \leadsto \sZ$ onto subvarieties $\sZ \hookrightarrow X$. The construction of these retracts and their properties is based on the author's Reduction-to-Singularity method \cite{martel}. Thus we propose the problem of Closing Steinberg Symbols as an important tool for constructing small dimensional $E\Gamma$ models and candidate spines. 
+This article studies an algebraic problem we call Closing the Steinberg symbol (CS) of the mapping class group $\Gamma:=Mod(S)$ of compact hyperbolic surfaces $S=S_g$ for $g\geq 3$. Formally solving (CS) requires finding finite subsets $I$ of $\Gamma$ which satisfy an algebraic subset sum condition, namely that the translates $\sum_{\phi \in I}\phi.\sB$ of a certain chain sum $\sB:=\sum_i \alpha_i$ represent a nontrivial homology cycle \S\ref{CS}. When formal solutions $I$ to (CS) satisfy additional metric convexity properties relative to a geometric model $X:=\sT_g$ of Teichmueller space, then we obtain an interesting supply of candidate equivariant deformation retracts $X \leadsto \sZ$ onto subvarieties $\sZ \hookrightarrow X$. The construction of these retracts and their properties is based on the author's Reduction-to-Singularity method \cite{martel} and \cite{martel2022}. Thus we examine the problem of Closing Steinberg Symbols as an important tool for constructing small dimensional $E\Gamma$ models and candidate spines. 
 \end{abstract}
 
 
@@ -105,9 +107,11 @@ This article studies an algebraic problem we call Closing the Steinbeg symbol (C
 %And equivariant retracts onto codimension one hypersurfaces is widely known in literature [ref]. But our method can readily produce larger codimension, even $codim_{\sT} \sZ > > 2$ when the target $\tau$ exhibits sufficient symmetries. 
 
 
-\section{MCG and Bieri-Eckmann Duality}
+\section{$Mod(S)$ and Bieri-Eckmann Duality}
 
-Throughout these notes we let $\Sigma_g$ be a closed hyperbolic surface of genus $g \geq 2$, and let $\Gamma:=MCG(\Sigma_g)$ be the mapping class group of orientation preserving diffeomorphisms. According to topologists we have $$MCG(\Sigma)=\pi_0(Diff_+(\Sigma)),$$ which is the group of orientation preserving diffeomorphisms of $\Sigma$ modulo isotopy. According to algebraists we have also Dehn-Neilsen-Baer's identification $$MCG(\Sigma)=Out(\pi_1(\Sigma))$$ where $\pi_1(\Sigma)=\pi_1(\Sigma, pt)$ is Poincar\'e's pointed fundamental group.
+We let $S=S_g$ be a closed hyperbolic surface of genus $g \geq 2$, and let $\Gamma:=Mod(S)$ be the mapping class group of $S$. The topologists define $$Mod(S):=\pi_0(Diff_+(S))$$ as the group of orientation preserving diffeomorphisms of $S$ modulo isotopy. The algebraists define $Mod$ via Dehn-Nielsen-Baer's theorem $$Mod(S)=Out(\pi_1(S))$$ where $\pi_1(S)=\pi_1(S, pt)$ is Poincar\'e's pointed fundamental group.
+ 
+ 
  
 
 %See [ref] for proofs. %For computations we find neither representation sufficiently effective, e.g. [ss]. 
@@ -122,11 +126,11 @@ Throughout these notes we let $\Sigma_g$ be a closed hyperbolic surface of genus
 
 %Naively, it's clear from experience that precise fundamental domains (precise reduction theory) is essentially an intractable problem. Moreover it's not clear that a precise fundamental domain is even desirable, or useful, in constructing spines. Our thesis [ref] introduces a general method of ``reduction to singularity", by which spines are represented as the singularity locus of an optimal transportation. We elaborate below.
 
-The group-theoretic (co)homology of $\Gamma$ is defined via the symmetries of proper discontinuous actions $X\times \Gamma \to X$ on $E\Gamma$ models $X$. There is extensive literature on this subject, a basic introduction is \cite{Brown}. The standard $E\Gamma$ model for the mapping class group is Teichmueller's $X=\sT_g$, a topological $(6g-6)$-cell $\simeq \bR^{6g-6}$, e.g. \cite{hubbard}. %There are alternative models which are also worth exploring, as will be discussed below \S \ref{s2}. 
+The group-theoretic (co)homology of $\Gamma$ is defined via the symmetries of proper discontinuous actions $\Gamma \times X \to X$ on $E\Gamma$ models $X$. There is extensive literature on this subject, c.f.\cite{Brown}. The standard $E\Gamma$ model for the mapping class group is Teichmueller's $X=\sT_g$, a topological $(6g-6)$-cell $\simeq \bR^{6g-6}$, e.g. \cite{hubbard}. %There are alternative models which are also worth exploring, as will be discussed below \S \ref{s2}. 
 
 %There is further a canonical uniform source measure on $\sT_g$
 
-It is a fundamental observation of Harvey \cite{Harvey}, Harer \cite{Harer1986}, Ivanov \cite{ivanov2015virtual},  etc., that $\Gamma=MCG(\Sigma_g)$ is a Bieri-Eckmann virtual duality group \cite{BiEck}. Here a key role is played by the action of $\Gamma$ on the simplicial curve complex $\sC$ and its reduced singular homology and chain groups. A formal definition follows:
+It is a fundamental observation of Harvey \cite{Harvey}, Harer \cite{Harer1986}, Ivanov \cite{ivanov2015virtual},  etc., that $\Gamma$ is a Bieri-Eckmann virtual duality group \cite{BiEck}. Here a key role is played by the action of $\Gamma$ on the simplicial curve complex $\sC$ and its reduced singular homology and chain groups. Recall the curve complex $\sC=\sC(S)$ of the surface is a simplicial complex whose $0$-skeleton (vertices) $\sC^0$ consists of simple closed curves (modulo isotopy), and where a simplex exists between vertices $a,b,c,\ldots$ if the curves are simultaneously pairwise disjoint on $S$. For example in genus $g=2$, the curve complex $\sC(S_2)$ is a two-dimensional infinite simplicial complex. Obviously $\Gamma$ acts on $\sC$, \cite{primer}. Now we present the formal definition of duality.
 
 %[Below seems premature: invokes dualizing module \bD before definition]
 % See section [ss] below.
@@ -135,8 +139,8 @@ It is a fundamental observation of Harvey \cite{Harvey}, Harer \cite{Harer1986},
 A finitely generated group $\Gamma$ is a duality group of dimension $\nu \geq 0$ with respect to a $\bZ \Gamma$-module $\bD$, if there exists an element $[B]\in H_\nu(\Gamma; \bD)$ with the following property: for every $\bZ \Gamma$-module $A$, the ``cap-product with $[e]$" defines $\bZ \Gamma$-module isomorphisms $H^d(\Gamma;A) \approx H_{\nu-d}(\Gamma; A \otimes_{\bZ \Gamma} \bD)$, $f\mapsto f\cap [e]$. 
 \end{dfn}
 
-The basic properties of duality groups are summarized in the following
-\begin{prop}[Bieri-Eckmann duality, \cite{BiEck}] \label{dual1}
+The basic properties of Bieri-Eckmann's homological duality are summarized in the following theorem from \cite{BiEck}.
+\begin{thmm}[Bieri-Eckmann]\label{dual1}
 Let $\Gamma$ be duality group of dimension $\nu$, with dualizing module $\bD$. Then 
 
 (i) we have $\bZ \Gamma$-isomorphism $\bD \approx H^\nu(\Gamma;\bZ \Gamma) \neq 0$, so $\bD$ is a torsion-free additive abelian group;
@@ -146,54 +150,63 @@ Let $\Gamma$ be duality group of dimension $\nu$, with dualizing module $\bD$. T
 (ii) the homology group $H_\nu (\Gamma; \bD)$ is infinite cyclic generated by $[e]$ as additive abelian group; 
 
 (iii) the group $\Gamma$ has cohomological dimension $cd(\Gamma)$ equal to $\nu$.
-\end{prop}
+\end{thmm}
 
 
 \begin{proof} 
-The statements are direct consequences of duality. (i) We see $H^\nu(\Gamma; \bZ \Gamma)$ $\approx H_0(\Gamma; \textbf{D})\approx \textbf{D}$. (ii) Duality implies $H^0(\Gamma; \underline{\bZ} )$ is isomorphic to $H_\nu(\Gamma; \underline{\bZ} \otimes_{\bZ \Gamma} \textbf{D})$, which in turn is canonically isomorphic to $H_\nu(\Gamma; \textbf{D})$ since $\underline{\bZ}\otimes_{\bZ \Gamma} \bZ \Gamma$ $\approx \textbf{D}$. But $H^0(\Gamma, \underline{\bZ})$ is canonically isomorphic to $\underline{\bZ}$. (iii) The duality isomorphism implies for every $\bZ \Gamma$-module $A$ that $H^*(\Gamma; A)$ is isomorphic to $H_{\nu-*}(\Gamma; A \otimes \textbf{D})$ which reduces to $0$ whenever $\nu-*<0$.
+The statements are direct consequences of duality. (i) We see $H^\nu(\Gamma; \bZ \Gamma)$ $\approx H_0(\Gamma; \bD)\approx \textbf{D}$. (ii) Duality implies $H^0(\Gamma; \underline{\bZ} )$ is isomorphic to $H_\nu(\Gamma; \underline{\bZ} \otimes_{\bZ \Gamma} \bD)$, which in turn is canonically isomorphic to $H_\nu(\Gamma; \bD)$ since $\underline{\bZ}\otimes_{\bZ \Gamma} \bZ \Gamma$ $\approx \bD$. But $H^0(\Gamma, \underline{\bZ})$ is canonically isomorphic to $\underline{\bZ}$. (iii) The duality isomorphism implies for every $\bZ \Gamma$-module $A$ that $H^*(\Gamma; A)$ is isomorphic to $H_{\nu-*}(\Gamma; A \otimes \bD)$ which reduces to $0$ whenever $\nu-*<0$.
 \end{proof}
 
-Most importantly for the mapping class group $\Gamma$, the dualizing module $\bD$ can be identified with the reduced homology of the simplicial curve complex. That is, we can identify $\bD$ up to $\bZ\Gamma$-isomorphism as $\bD=\tilde{H}_*(\sC;\bZ)$, where of course the reduced homology group inherits the natural structure of $\bZ \Gamma$-module from the action of $\Gamma$ on $\sC$. The curve complex has the homotopy-type of a countable bouquet of $(2g-2)$-dimensional spheres, c.f. \cite{ivanov2015virtual}, \cite{Harer1986}. Thus we deduce that $$vcd(\Gamma)=6g-6-(2g-2)+1=4g-5.$$ For example in genus $g=2$, this implies that $\sT_2$ is a $6$-dimensional $E\Gamma$ model, yet whose quotient $\sT_2/\Gamma$ has the topology of a $3$-dimensional complex. Thus the problem of constructing spines or souls for $\Gamma$ arises, where we seek an explicit construction or realization of this $3$-dimensional singular subvariety. 
+Most importantly for the mapping class group $\Gamma$, the dualizing module $\bD$ can be identified with the reduced homology of the simplicial curve complex. That is, we can identify $\bD$ up to $\bZ\Gamma$-isomorphism as $\bD=\tilde{H}_*(\sC;\bZ)$, where the reduced homology group inherits the natural structure of $\bZ \Gamma$-module from the action of $\Gamma$ on $\sC$. The curve complex has the homotopy-type of a countable bouquet of $(2g-2)$-dimensional spheres, c.f. \cite{ivanov2015virtual}, \cite{Harer1986}. Thus we deduce that $$vcd(\Gamma)=6g-6-(2g-2)+1=4g-5.$$ For example in genus $g=2$, this implies that $\sT_2$ is a $6$-dimensional $E\Gamma$ model, yet whose quotient $\sT_2/\Gamma$ has the topology of a $3$-dimensional complex. Thus arises the problem of constructing spines or souls for $\Gamma$ and we seek explicit constructions or realizations of this $3$-dimensional singular subvariety. 
 
-The problem of (CS) is based on homological properties of $\Gamma$, and specifically a representation of Bieri-Eckmann's dualizing module $\bD$ with the reduced homology of an excision boundary $\bD\simeq \tilde{H}_*(\del \sT[t]; \bZ)$, where $\sT[t]$ is a maximal $\Gamma$-rational excision of Teichmueller space. We elaborate below.
+The problem of (CS) is based on homological properties of $\Gamma$, and specifically a representation of Bieri-Eckmann's dualizing module $\bD$ with the reduced homology of an excision boundary $\bD\simeq \tilde{H}_*(\del \sT[t]; \bZ)$, where $\sT[t]$ is a maximal $\Gamma$-rational excision of Teichmueller space for a sufficiently small parameter $t$. We elaborate below.
 
 \section{Canonical Riemannian metrics on $\sT_g$ and Flat Filling}\label{s2}
-In this section we describe some geometric metric properties which are required on $\sT$ for our construction to be readily effective. The issue always returns that there is no real "canonical metric", although there is a canonical symplectic form (Wolpert, Kerkhoff, et. al). Among the foundational results of Riemann surfaces is Teichmueller's theorem that $\sT_g$ is a topological open $(6g-6)$-dimensional ball. The result has long history originating in Riemann's moduli count of $3g-3$ complex parameters. Of course the $\Gamma$-equivariant topology of $\sT_g$ is highly nontrivial. We assume here the basic facts: that $\Gamma$ acts proper discontinuously on $\sT_g$ with finite covolume. The construction of $\Gamma$ equivariant metrics $d$ on $\sT$ is non canonical and there are many candidates. Popular metrics are Teichmueller's original metric $d_{Teich}$ \cite{hubbard},  Weil-Peterson's metric $d_{WP}$ \cite{hubbard}, Thurston's metric \cite{wolpert1986a}, or McMullen's \cite{mcmullen2000moduli}. 
+In this section we describe some geometric properties which are required on $\sT$ for our construction to be effective. The difficulty is that there is no canonical Riemannian metric on $\sT$, although there is a canonical symplectic form (Wolpert, Kerkhoff, et. al). The construction of $\Gamma$ equivariant metrics $d$ on $\sT$ is non canonical and there are many candidates. Popular metrics are Teichmueller's original metric $d_{Teich}$ \cite{hubbard},  Weil-Peterson's metric $d_{WP}$ \cite{hubbard}, Thurston's metric \cite{wolpert1986a}, or McMullen's \cite{mcmullen2000moduli}. 
 
-For a choice of invariant Riemannian metric $d$ on $\sT$ and invariant function $t: \sC^0 \to \bR_{>0}$, we define an excision $\sT[t]$ of $\sT$ by excising (``scooping out") horoballs centred at various points at infinity. Our method distinguishes the $\Gamma$-rational horoball excisions which enjoy the further property of having $\Gamma$-invariant boundary horospheres. Thus $\Gamma$ acts proper discontinuously on both $\sT[t]$ and $\del \sT[t]$. We further emphasize those parameters $t$ which are sufficiently small, in which case the excisions $\sT[t]$  have a $\Gamma$-equivariant topological boundary $\del \sT[t]$ with the homotopy-type of $\sC$. This important fact implies a canonical isomorphism $$\bD\approx \tilde{H}_*(\del \sT[t]; \bZ).$$ For the constructive topologist the $\Gamma$-action on $\sT$ is more accesible than the abstract algebraic action on $\bD$. The homologically essential spheres of $\sC$ can be viewed as spheres at-infinity within the excision $\sT[t]$. The $\Gamma$-orbit of these spheres and their singular chain sums generates an important topological $\bZ \Gamma$-module called the \emph{Steinberg module}. Following convention we designate the generator of this module a Steinberg symbol $B$, c.f. ``modular symbols" in \cite{AR}, \cite{AGM}, \cite{Stein}, \cite{Sol}, and references therein. 
+We assume here the basic facts that $\Gamma$ acts proper discontinuously on $\sT_g$ with finite covolume. Of course $\sT$ is a cell by Teichmuller's theorem and therefore topological trivial. However the $\Gamma$-equivariant topology of $\sT$ is highly nontrivial. 
 
-The contractibility of $\sT[t]$, $\sT$, and the long exact sequence in relative homology implies the natural boundary morphism $$\delta: C_*(\sT[t], \del \sT[t]) \to C_{*-1}(\del \sT[t])$$ is an isomorphism. Here $C_*$ denotes the singular chain groups. However what we require for applications is an inverse operation which is well-defined directly on singular chains, namely $$FILL:=\delta^{-1}: C_{*-1}(\del \sT[t]) \to C_*(\sT[t], \del \sT[t])$$. This inverse operation is a \emph{filling} operation and requires a choice of metric $d'$. For our applications, any metric $d'$ with the following properties would be desirable:
+For a choice of invariant Riemannian metric $d$ on $\sT$ and invariant function $t: \sC^0 \to \bR_{>0}$, we define an excision $\sT[t]$ of $\sT$ by excising (``scooping out") horoballs centred at various $\Gamma$-rational points at-infinity $\lambda$ and with radius $t(\lambda)$. We focus on these $\Gamma$-rational horoballs of $\sT$ because they have the further property of having $\Gamma$-invariant boundary horospheres. Thus $\Gamma$ acts proper discontinuously on both $\sT[t]$ and $\del \sT[t]$. We further emphasize those parameters $t$ which are sufficiently small, in which case the excisions $\sT[t]$  have a $\Gamma$-equivariant topological boundary $\del \sT[t]$ with the homotopy-type of $\sC$. This important fact implies a canonical isomorphism $$\bD\approx \tilde{H}_*(\del \sT[t]; \bZ).$$ For the constructive topologist the $\Gamma$-action on $\sT$ is more accesible than the abstract algebraic action on $\bD$. The homologically essential spheres of $\sC$ can be viewed as spheres at-infinity within the excision $\sT[t]$. The $\Gamma$-orbit of these spheres and their singular chain sums generates an important topological $\bZ \Gamma$-module called the \emph{Steinberg module}. Following convention we designate the generator of this module a Steinberg symbol $B$, c.f. ``modular symbols" in \cite{AR}, \cite{AGM}, \cite{Stein}, \cite{Sol}, and references therein. 
+
+The contractibility of $\sT[t]$, $\sT$, and the long exact sequence in relative homology implies the natural boundary morphism $$\delta: C_*(\sT[t], \del \sT[t]) \to C_{*-1}(\del \sT[t])$$ is an isomorphism. Here $C_*$ denotes the singular chain groups. However what we require for applications is an inverse operation which is well-defined directly on singular chains, namely $$FILL:=\delta^{-1}: C_{*-1}(\del \sT[t]) \to C_*(\sT[t], \del \sT[t]).$$ This inverse operation is a \emph{filling} operation and requires a choice of metric $d'$. For our applications, any metric $d'$ with the following properties is sufficient:
 
 \begin{itemize}
 \item[(M1)] the metric $d'$ is metrically complete and proper in the interior of $\sT$;
 \item[(M2)] the metric has nonpositive sectional curvature $(\kappa \leq 0)$ in $\sT$;
-\item[(M3)] the $(2g-2)$-dimensional spheres generating the Steinberg symbol at infinity admits a unique $d'$-flat filling $(\kappa =0)$ to relative cycles in $(\sT[t], \del \sT[t])$.
+\item[(M3)] the $(2g-2)$-dimensional spheres generating the Steinberg symbol at infinity admit unique $d'$-flat fillings $(\kappa =0)$ to relative cycles in $\sT[t]$ mod $\del \sT[t]$.
 \end{itemize}
 
-If we examine the usual metrics, we find the WP metric has properties (M1), (M2). The author does not know if (M3) holds, although \cite{FarbRank} appears to suggest otherwise. We observe that (M2) has the important consequence that WP-horoballs are geodesically convex in $(\sT, d_{WP})$, \cite{GroCurv}. 
-
-With respect to Teichmuller's original metric, we know (a) holds, but (b) fails and Teichmueller's original metric has regions of positive curvature. Moreover recent work of \cite{RafiBourque} shows that ``convex hull" constructions are not possible in Teichmueller's metric. 
-
-Thus we face the following open problem: 
-\begin{prob}
-Establish the existence or non-existence of $\Gamma$-invariant metrics $d'$ on $\sT_g$ satisfying properties (M123). 
-\end{prob}
-
-Any metric $d'$ satisfying the properties (M123) on $\sT$ would readily lead to the existence of equivariant homotopy reductions of $\sT$ onto a candidate spine $\sZ$ according to \cite{martel}. When (M3) holds, the Steinberg symbol $B$ canonically fills to a flat relative cycle $(P, \del P)$ in $(\sT[t], \del \sT[t])$, and we call the flat relative cycles $P=FILL[B]$ ``panels". The motivation for the terminology is given in \S \eqref{CS} below. The panels are homologically nontrivial relative cycles in $\sT[t]$ modulo the boundary $\del \sT[t]$. In fact the condition (M3) could be slightly weakened, for the application of our reduction to singularity method \cite{martel} does not strictly need the Steinberg symbols to admit flat-fillings. Rather what is essential is the geometric uniqueness of such fillings. 
+If we examine the usual metrics, we find the WP metric has properties (M1), (M2). The work of S. Wolpert implies that $d_{WP}$ also satisfies (M3). We observe that (M2) has the important consequence that WP-horoballs are geodesically convex in $(\sT, d_{WP})$, c.f. \cite{GroCurv}. With respect to Teichmuller's original metric, we know (M1) holds, but (M2) fails and Teichmueller's original metric has regions of positive curvature. Moreover recent work of \cite{RafiBourque} shows that convex hull constructions are not possible in Teichmueller's metric. 
 
 
-The following is very important lemma for our method. 
 
-\begin{lem}\label{kl}
-Let $d'$ be a metric on $\sT$ satisfying properties $(M123)$. Let $\sT[t]$ be a maximal $\Gamma$-rational excision with sufficiently small parameter $t$. Let $B$ be a Steinberg symbol, and $P=FILL[B]$ the flat-filling. Then $P$ has zero geometric self-intersection in the quotient $\sT[t]/\Gamma$.
+\begin{lem}
+Let $Q$ be a geodesic pants decomposition of the hyperbolic surface $(S,g)$. Let $\mathscr{Q}$ be the submanifold of $\sT$ passing through $(S,g)$, and such that the Nielsen twist tangents $t(a)$ vanish for every geodesic curve $a \in Q$. Then $\mathscr{Q}$ is a totally flat submanifold of $\sT$ having vanishing sectional curvatures with respect to the WP metric $d_{WP}$. 
 \end{lem}
 \begin{proof}
 
 \end{proof}
 
-To motivate Lemma \ref{kl}, recall that if $\Sigma$ is a closed hyperbolic surface, and $\alpha$ is a closed geodesic on $\Sigma$, then the lifts $\tilde{\alpha}$ of $\alpha$ to the universal covering $\tilde{\Sigma}$ form a $\pi_1(\Sigma)$ orbit in $\tilde{\Sigma}$ where all the translates are disjoint. Likewise Lemma \ref{kl} asserts that the $\Gamma$-translates of $P$ are disjoint in the interior of $\sT[t]$, and the quotient $\sT[t] \to \sT[t]/\Gamma$ maps $P$ isometrically onto its image.
 
-The existence of parabolic elements $\gamma$ in $\Gamma$ on the other hand, shows that asymptotically as $t\to 0^+$ the relative cycle $P$ and its translates $P.\gamma$ have intersections ``at infinity". However with respect to an equivariant rational parameter $t$, there is no self intersection in the \emph{interior} of $\sT[t]$.
+Equivalently we find $\mathscr{Q}$ consists of all hyperbolic surfaces such that the dual pants $Q^*$ intersect $Q$ orthogonally. This is equivalent to saying $\mathscr{Q}$ consists of all surfaces obtained from $(S,g)$ by varying the length parameters $\ell_a$, $a\in Q$, and fixing all twists equal to zero in Fenchel-Nielsen coordinates. 
+
+% The author does not know if (M3) holds, although \cite{FarbRank} appears to suggest otherwise. 
+
+Any metric $d'$ satisfying the properties (M123) on $\sT$ would readily lead to the existence of equivariant homotopy reductions of $\sT$ onto a candidate spine $\sZ$ according to \cite{martel}. When (M3) holds, the Steinberg symbol $B$ canonically fills to a flat relative cycle $(P, \del P)$ in $(\sT[t], \del \sT[t])$, and we call the flat relative cycles $P=FILL[B]$ ``panels". The motivation for the terminology is given in \S \eqref{CS} below. The panels are homologically nontrivial relative cycles in $\sT[t]$ modulo the boundary $\del \sT[t]$. In fact the condition (M3) could be slightly weakened, for the application of our reduction to singularity method \cite{martel} does not strictly need the Steinberg symbols to admit flat-fillings. Rather what is essential is the geometric uniqueness of such fillings. 
+
+
+The following is important lemma for our method. 
+
+\begin{lem}\label{kl}
+Let $d$ be a metric on $\sT$ satisfying properties $(M123)$. Let $\sT[t]$ be a maximal $\Gamma$-rational excision with sufficiently small parameter $t$. Let $B$ be a Steinberg symbol with $P=FILL[B]$ the flat-filling. Then $P$ has zero geometric self-intersection in the quotient $\sT[t]/\Gamma$, and the quotient projection $\sT[t] \to \sT[t]/ \Gamma$ maps $P$ isometrically onto its image.
+\end{lem}
+\begin{proof}
+% By symmetry we argue that the principle curvatures of $P$ vanish. This implies $P$ is flat?
+\end{proof}
+
+To motivate Lemma \ref{kl}, recall that if $S$ is a closed hyperbolic surface, and $\alpha$ is a closed geodesic on $S$, then the lifts $\tilde{\alpha}$ of $\alpha$ to the universal covering $\tilde{S}$ form a $\pi_1(S)$ orbit in $\tilde{S}$ where all the translates are disjoint. %Likewise Lemma \ref{kl} asserts that the $\Gamma$-translates of $P$ are \emph{disjoint} in the interior of $\sT[t]$, and the quotient $\sT[t] \to \sT[t]/\Gamma$ maps $P$ isometrically onto its image.
+
+By contrast the existence of parabolic elements $\gamma$ in $\Gamma$ shows that the relative cycle $P$ and its parabolic translates $\gamma.P$ intersect asymptotically ``at infinity" when $t\to 0^+$. However with respect to an equivariant rational parameter $t$, there is no self intersection in the interior of $\sT[t]$.
 
 %Wolpert [ref] has important formulas describing gradients of WP distance function. 
 
@@ -203,7 +216,7 @@ The existence of parabolic elements $\gamma$ in $\Gamma$ on the other hand, show
 
 
 \section{Closing Steinberg}\label{CS}
-The problem of Closing Steinberg is informally related to stitching a closed football $F$ from a sequence of panels $\{P_i\}_{i\in I}$. The panels $P_i$ are required to have the property that $F=conv\{P_i|~i\in I\}$ and such that $\sum_{i\in I} \del P_i=0$ over $\bZ/2\bZ$-coefficients. In otherwords, the problem requires finding a sequence of panels $P_i, i\in I$ which assemble to a closed compact convex subset $F$ as defined above. The panels $P=P_i$ of the above footballs are analogous to the flat-filled Steinberg symbols $P=FILL[B]$ and their translates $B.\gamma$, $\gamma\in \Gamma$. Compare Figure \ref{nikeball}.
+The problem of Closing Steinberg is informally related to stitching a closed football $F$ from a sequence of panels $\{P_i\}_{i\in I}$. The panels $P_i$ are required to have the property that $F=conv\{P_i~|~i\in I\}$ and such that $\sum_{i\in I} \del P_i=0$ over $\bZ/2\bZ$-coefficients. In otherwords the problem requires finding a sequence of panels $P_i$, ($i\in I$) which assemble to a closed compact convex subset $F$ as defined above. The panels $P=P_i$ of the above footballs are analogous to the flat-filled Steinberg symbols $P=FILL[B]$ and their translates $\gamma.B$ ($\gamma\in \Gamma$). Compare Figure \ref{nikeball}.
 
  %where $\bD:=\tilde{H}_\nu (\sT[t]; \del \sT[t])$ is the reduced singular homology group of the excision model $\sT[t]$ constructed above, and $\underline{\bZ}/2$ is the 
 
@@ -215,21 +228,21 @@ The problem of Closing Steinberg is informally related to stitching a closed foo
 \caption{}
 \end{figure}
 
-Now we present the formal definition of (CS) as derived from Bieri-Eckmann's homological duality \cite{BiEck}, \cite{BS}. When the reader reviews the definition of homology with coefficients in a chain complex \cite{Brown}, then one finds the problem of (CS) amounts to constructing a nontrivial $0$-cycle $\xi \in H_0(\Gamma; \underline{\bZ}_2 \Gamma \otimes \bD)$. Bieri-Eckmann duality says $$H_0(\Gamma; \underline{\bZ}_2 \Gamma \otimes \bD) \approx H^\nu(\Gamma; \underline{\bZ}_2 \Gamma)\approx \underline{\bZ}_2 \otimes_\bZ \textbf{D}\neq 0.$$ Thus we deduce the formal existence of nontrivial $0$-cycles. However our applications will require nontrivial $0$-cycles which satisfy further ``convex" assumptions, c.f. \eqref{cs} below.
+Now we present the formal definition of (CS) as derived from Bieri-Eckmann's homological duality \cite{BiEck}, \cite{BS}. When the reader reviews the definition of homology with coefficients in a chain complex \cite{Brown}, then one finds the problem of (CS) amounts to constructing a nontrivial $0$-cycle $\xi \in H_0(\Gamma; \underline{\bZ}_2 \Gamma \otimes \bD)$. Bieri-Eckmann duality says $$H_0(\Gamma; \underline{\bZ}_2 \Gamma \otimes \bD) \approx H^\nu(\Gamma; \underline{\bZ}_2 \Gamma)\approx \underline{\bZ}_2 \otimes_\bZ \textbf{D}\neq 0.$$ Thus we deduce the formal existence of nontrivial $0$-cycles. %However our applications will require nontrivial $0$-cycles which satisfy further ``convex" assumptions, c.f. \eqref{cs} below.
 
-The group $\Gamma$ of symmetries flips, rotates, and translates the base cycle $[P]$ throughout the space, and every finite subset $I$ of $\Gamma$ produces a finite chain sum $$\sum_{\gamma\in I} [P].\gamma,$$ with total chain boundary $$\del(\sum_{\gamma\in I} [P].\gamma)=\sum_{\gamma\in I} \del [P].\gamma.$$ \textit{The basic problem of Closing Steinberg is to produce a finite subset $I \subset \Gamma$ for which the boundary of the nontrivial chain sum $\sum_{\gamma\in I} [P].\gamma$ vanishes in the mod $2$ homology group.} The complete definition of Closing Steinberg includes further geometric conditions on the $\Gamma$-translates $F.\Gamma$ of the the closed convex hull $F=conv[P.I]$ of the translates $B.I$. Let $\sT[t], \del \sT[t]$ be a $\Gamma$-invariant excision of $\sT$. Let $[P]$ be a flat-filled relative cycle representing a nonzero generator of $H_{q+1}(\sT[t], \del \sT[t]; \bZ)$.
+The group $\Gamma$ of symmetries flips, rotates, and translates the base cycle $[P]$ throughout the space, and every finite subset $I$ of $\Gamma$ produces a finite chain sum $$\sum_{\gamma\in I} \gamma.[P],$$ with total chain boundary $$\del(\sum_{\gamma\in I} \gamma.[P])=\sum_{\gamma\in I} \gamma.\del [P].$$ The basic problem of Closing Steinberg is to produce a finite subset $I \subset \Gamma$ for which the boundary of the \emph{nontrivial} chain sum $\sum_{\gamma\in I} \gamma.[P]$ vanishes in the mod $2$ homology group. The complete definition of Closing Steinberg includes further geometric conditions on the $\Gamma$-translates $\Gamma.F$ of the the closed convex hull $F=conv[P.I]$ of the translates $B.I$. Let $\sT[t], \del \sT[t]$ be a $\Gamma$-invariant excision of $\sT$. Let $[P]$ be a flat-filled relative cycle representing a nonzero generator of $H_{q+1}(\sT[t], \del \sT[t]; \bZ)$.
 
 \begin{dfn}[\textbf{Closing Steinberg}]\label{cs}
 A finite subset $I$ of $\Gamma$ successfully Closes Steinberg if: 
 
-\textbf{(i: nontrivial mod $2$)} the chain $\xi=\sum_{\gamma\in I} P.\gamma $ is nonvanishing over $\bZ/2$ coefficients in the chain group $C_{q+1}(\sT[t],\del \sT[t];\bZ/2)$;  
+\textbf{(i.) nontrivial mod $2$} the chain $\xi=\sum_{\gamma\in I} \gamma.P $ is nonvanishing over $\bZ/2$ coefficients in the chain group $C_{q+1}(\sT[t],\del \sT[t];\bZ/2)$;  
 
-\textbf{(ii: vanishing boundary mod $2$)} the boundary $\del \xi=\sum_{\gamma\in I} \del [P].\gamma $
+\textbf{(ii.) vanishing boundary mod $2$} the boundary $\del \xi=\sum_{\gamma\in I} \gamma.\del [P] $
 vanishes over $\bZ/2$-coefficients in the homology group $[\del \xi]=0$ in $H_q(\del \sT[t]; \bZ)$;
 
-\textbf{(iii: well-defined convex hull)} the boundary-chain representing $\del \xi$ is simultaneously visible from an interior point $x$ in $\sT[t]$;
+\textbf{(iii.) well-defined convex hull} the boundary-chain representing $\del \xi$ is simultaneously visible from at least one interior point $x$ in $\sT[t]$;
 
-\textbf{(iv: well-separated gates)} there exists a finite-index subgroup $\Gamma' < \Gamma$ such that the chain sum $\uF=\sum_{\gamma \in \Gamma'}F.\gamma$ has nonempty \emph{well-separated gates} precisely equal to the principal orbit $\{P.\gamma ~|~ \gamma\in \Gamma'\}$. 
+\textbf{(iv.) well-separated gates} there exists a finite-index subgroup $\Gamma' < \Gamma$ such that the chain sum $\uF=\sum_{\gamma \in \Gamma'}\gamma.F$ has nonempty \emph{well-separated gates} precisely equal to the principal orbit $\{\gamma.P ~|~ \gamma\in \Gamma'\}$. 
 %the translates $B.\gamma$, per $\gamma\in I$, are geometrically disjoint in $X[t]$.
 \end{dfn}
 
@@ -237,14 +250,37 @@ Our definition of Closing Steinberg was inspired by the author's study of \cite{
 
 
  %Cremona successfully Closes Steinberg in several cases for $\Gamma=GL(\mathscr{O}_{\sqrt{-d}})$, where $\mathscr{O}_{\sqrt{-d}}$ is the ring of integers of some Euclidean complex quadratic fields. 
-The hypotheses (i)--(ii) basically require the chain sum $\xi$ to be nonzero mod $2$. The hypotheses (iii)--(iv) are ``convex" assumptions, and which need be verified for any nonzero chain. The hypothesis of well-separated gates is related to the following fact: the translates $P, P.\gamma$, for $\gamma\in \Gamma$, are either identical or geometrically disjoint in $\sT[t]$ according to Lemma \ref{kl}. However the translates $P, P.\gamma$ may have nontrivial intersection at infinity in the initial Teichmueller space $\sT$. In fact the problem of (CS) is precisly to find such nontrivial intersections at infinity, although again the intersections are disjoint in the interior of $\sT[t]$.
+The hypotheses (i)--(ii) basically require the chain sum $\xi$ to be nonzero mod $2$. The hypotheses (iii)--(iv) are convexity assumptions which need be verified for any nonzero chain. The hypothesis of well-separated gates is related to the following fact: the translates $P, \gamma.P$, for $\gamma\in \Gamma$, are either identical or geometrically disjoint in $\sT[t]$ according to Lemma \ref{kl}. However the translates $P, \gamma.P$ may have nontrivial intersection at infinity in the initial Teichmueller space $\sT$. In fact the problem of (CS) is precisly to find such nontrivial intersections at infinity, although again the intersections are disjoint in the interior of $\sT[t]$.
 
-%Moreover the convexity assumptions are nontrivial, and require a new metric on $\sT$. For indeed we should require the metric to be nonpositively curved
-
-
+Obviously the group structure of $\Gamma$ allows us to restrict ourselves to subsets $I$ containing the identity mapping class $Id\in \Gamma$. In practice, formal solutions to (CS) can often be found among the torsion elements and finite subgroups of $\Gamma$, c.f. \cite{Cremona}.
 
 
+\begin{prop}\label{noobs}
+Let $\Gamma$ be a Bieri-Eckmann duality group, with dualizing module $\mathbf{D}$. Then there exists finite subsets $I$ in $\Gamma$ for which $\xi=\sum_{\gamma\in I}\gamma.P$ lies in the kernel of $\del_0$ over $\bZ/2$.
+\end{prop}
+\begin{proof}
+The argument is homological. We interpret $\xi$ as a chain sum representing a $0$-cycle in $H_0(\Gamma; \bZ/2 \Gamma \otimes_{\bZ \Gamma} \textbf{D})$. The hypotheses of Closing Steinberg imply $\xi$ is homologically nontrivial cycle. Bieri-Eckmann duality (Proposition \ref{dual1}) implies the kernel $\ker \del_0$ is naturally isomorphic to the induced $\bZ \Gamma$-module $\bZ /2 \otimes_\bZ \textbf{D}$ which is nonzero. 
+\end{proof}
 
+To illustrate, let the reader observe that a typical element $\phi\in Mod$ will \emph{totally displace} the curves in $\sB$ such that $\sB \cap \phi.\sB=\emptyset$ for almost every $\phi\in Mod$. On the other hand, if $\phi'$ permutes the curves such that $\phi.\sB=\sB$, then $I=\{Id,\phi'\}$ would be a solution of \eqref{bb}. However we consider this solution to be trivial in the following sense: the formal sum $[\sB]+\phi'.[\sB]=2[\sB]=0$ is itself vanishing mod $2$. Such trivial solutions are avoided in the case of higher genus closed surfaces as the work of \cite{birman2013finite} demonstrates, i.e. the identity element is the only mapping class which permutes $\sB$. Obviously parabolic type elements $\phi$, i.e. curve stabilizers $\phi\in Mod_\gamma$ satisfy$\sB \cap \phi.\sB \supset \{\gamma\}$. So naturally one is tempted to find formal solutions to (CS) by choosing a suitable sequence of parabolics. 
+
+
+
+
+
+
+Our hypotheses regarding Closing Steinberg have useful consequences, which we summarize in the following theorem.
+\begin{thm}\label{cs1} 
+Suppose $I \subset \Gamma$ successfully Closes Steinberg (Definition \ref{cs}). Define $F:=conv[P.I]$ and $\uF=\sum_{\gamma\in \Gamma}\gamma.F$. Then
+
+(i) the $\Gamma$-translates $\gamma.F$, $\gamma \in \Gamma$, form a chain sum $$\uF:= \cdots [F]\gamma + [F] \gamma' + [F] \gamma''+\cdots, $$ and there exists finite-index subgroup $\Gamma' <\Gamma$ which acts as additive shift-operator on the summands of $\uF$; and
+
+(ii) the support of the chain sum $\uF$ is a simply-connected subset of $X$, and $\uF$ is a cubical $E\Gamma'$ model.
+
+\end{thm}
+\begin{proof}
+We can replace $\Gamma$ with a finite-index torsion-free subgroup $\Gamma'$ to ensure $\Gamma'$ acts freely on $X$, and therefore $X[t], \del X[t]$. Moreover we can ensure $\Gamma'$ translates the flat-filled relative cycle $\gamma.[P]$, for $\gamma\in \Gamma'$ freely. Then $\gamma.[P] \neq [P]$ when $\gamma\neq id$. The definition of Closing Steinberg implies distinct translates $F, F'$ are disjoint unless they intersect in a gate $G'=\gamma'.P$ for some $\gamma' \in \Gamma'$. So $\gamma.F$ equals $F$ only if $\gamma=Id$ is trivial. This proves the summands $\{\gamma.F~|~ \gamma\in \Gamma'\}$ of $\uF$ form a principal $\Gamma'$-set, and establishes (i). The existence of an interior point $x\in F$ which is simultaneously visible to the translates $P.I$ in $X[t]$ proves $F=conv[P.I]$ is a compact convex set, and homeomorphic to some cube. Thus $\uF$ is a chain sum of cubes, hence a cubical chain sum and therefore (ii). 
+\end{proof}
 
 
 
@@ -284,12 +320,33 @@ The hypotheses (i)--(ii) basically require the chain sum $\xi$ to be nonzero mod
 %Explicit constructions of fundamental domains for the action $\sT \times \Gamma \to \sT$ is practically impossible, and requires precise knowledge of generators and relations in $\Gamma$. Acknowledging our imperfect \`a priori knowledge of $\Gamma$, we introduced the definition of ``Closing the Steinberg symbol" in [ref], abbreviated (CS). 
 
 
-\section{Open Problem: (CS) for Genus 2}
-To illustrate our ideas, we now study the case of genus two closed Riemann surface. The duality theory of mapping class groups $\Gamma=MCG(\Sigma_g)$ for genus $g=2$ has been described by \cite{Broaddus2012}. For reference we include the following figure taken from \cite[Fig.10]{Broaddus2012}, see \eqref{br}.%Let $B$ be Broaddus' two-sphere in the curve complex $\sC$. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{(CS) for Genus Two Mapping Class Group $(g=2)$}
+To illustrate our ideas, we now study the case of genus two closed Riemann surface. The duality theory of mapping class groups $\Gamma=Mod(S_g)$ for genus $g=2$ has been described by \cite{Broaddus2012}. For reference we include the following figure taken from \cite[Fig.10]{Broaddus2012}, see \eqref{br}.%Let $B$ be Broaddus' two-sphere in the curve complex $\sC$. 
 
 \begin{figure}\label{br}
 \centering
-\includegraphics[width=0.6\textwidth]{broaddus-sphere-marked-new.png}
+\includegraphics[width=0.4\textwidth]{broaddus-sphere-marked-new.png}
 \caption{Homologically nontrivial $2$-sphere in the curve complex $\sC$ of genus $2$ closed surface. Figure adapted from \cite[Fig.10]{Broaddus2012}}
 \end{figure}
 %Observe $B$ has nine vertices $\alpha_1, \alpha_2, \alpha_3,\beta_1, \beta_2, \beta_3.$ The sets of curves $\{\alpha_1, \alpha_2, \alpha_3\}$ and $\{\alpha_4, \alpha_5, \alpha_6\}$ are pants decompositions. The curves $\beta_1, \beta_2, \beta_3$ are separating curves on $\Sigma$. Then (CS) requires a finite subset $I \subset \Gamma$ such that the chain sum $$SUM [\{\alpha_i.\gamma, ~\beta_j.\gamma |~~i=1,\ldots,6,~~j=1,2,3, ~~\gamma \in I\}] $$ vanishes over $\bZ/2$-coefficients, i.e. such that $$\sum_{\gamma \in I} (\alpha_1.\gamma+\cdots+\alpha_6.\gamma+\beta_1.\gamma+ \beta_2.\gamma+ \beta_3.\gamma )=0 ~~ (mod~ 2).$$ 
@@ -298,45 +355,57 @@ To illustrate our ideas, we now study the case of genus two closed Riemann surfa
 
 
 %\subsection{Formal Solutions of (CS) in genus two}
-The formal problem of (CS) for genus two surfaces has the following symbolic setup. Let $V:=\bZ/2(\sC^0)$ be the abelian topological group consisting of finitely-supported $\bZ/2$-valued functions $f: \sC^0 \to \bZ/2$ on the set of free homotopy classes of simple closed curves on a surface $\Sigma$. Symbolically, we abbreviate such a function $f$ with its support $\alpha+\beta+\ldots$. On the genus two closed surface, consider Broaddus' set of nine curves $\alpha_i, \beta_j, \gamma_k$, $i,j,k \in \{1,2,3\}$, and especially the formal sum $$\sB:= \sum_{i,j,k=1}^{3} \alpha_i+\beta_j+\gamma_k.$$ Now finally we make the problem of (CS) totally explicit: 
+The formal problem of (CS) for genus two surfaces has the following symbolic setup. Let $V:=\bZ/2(\sC^0)$ be the abelian topological group consisting of finitely-supported $\bZ/2$-valued functions $f: \sC^0 \to \bZ/2$ on the set $\sC^0$ of free homotopy classes of simple closed curves on a surface $S$. We abbreviate such a function $f$ with its support $\alpha+\beta+\ldots$. On the genus two closed surface, consider Broaddus' set of nine curves $\alpha_i, \beta_j, \gamma_k$ for $i,j,k \in \{1,2,3\}$, and the formal sum 
+\begin{equation}\label{bb}
+\sB:= \sum_{i,j,k=1}^{3} \alpha_i+\beta_j+\gamma_k.
+\end{equation}
 
+Now finally we make the problem of (CS) totally explicit: 
 \begin{dfn}
 A finite subset $I\subset \Gamma$ formally Closes Steinberg for the mapping class group $\Gamma$ of genus two closed surfaces if 
 \begin{equation}
 \label{bb}
-\sum_{\phi\in I} \sum_{\alpha\in \sB}\alpha.\phi=0, ~~mod~2,
+\sum_{\phi\in I} \sum_{\alpha\in \sB}\phi.\alpha=0, ~~mod~2
 \end{equation}
 where the zero element $0$ on the right hand side is the zero element in $V$, i.e. the constant zero-valued distribution on $\sC^0$. 
 \end{dfn}
 
-Symbolically the ``vanishing mod $2$" of the translates $\sum_{\phi\in I} \sB.\phi$ says there is an \emph{even} number of coincidences between the translated curves $\alpha.\phi$ where $\phi\in I$, $\alpha\in \sB$. 
+Symbolically the ``vanishing mod $2$" of the translates $\sum_{\phi\in I} \phi.\sB$ says there is an \emph{even} number of coincidences between the translated curves $\phi.\alpha$ where $\phi\in I$, $\alpha\in \sB$. This can be implemented on python by iterated symmetric differences. For example if $\sB$ denotes the \emph{set} of curves defined in \eqref{bb}, then a finite subset $I=\{\phi_1, \ldots, \phi_n\}$ is formal solution to (CS) if $$(\phi_1. \sB) \Delta \cdots \Delta (\phi_n.\sB) = \emptyset.$$ We can omit the parentheses since the symmetric difference $\Delta$ is an associative operator.
 
-Remark. Obviously the group structure of $\Gamma$ allows us to restrict ourselves to subsets $I$ containing the identity mapping class $Id\in \Gamma$. 
+Now we introduce some standard notation following \cite{nakamura2018generation}. Let $$\eta=aecf$$ be the order ten element in $Mod(S_2)$ and define $$\mu:=\eta^4.$$ Then $\mu$ is an order five element in $Mod$. If $a,b,c$ is a geodesic pant decomposition, then we define the chain sum $$B:=[a]+[b]+[c]+\mu.[a]+\mu.[b]+\mu.[c].$$
 
-To illustrate, let the reader observe that a typical element $\phi\in MCG$ will \emph{totally displace} the curves in $\sB$ such that $\sB \cap \sB.\phi=\emptyset$ for almost every $\phi\in MCG$. On the other hand, if $\phi'$ permutes the curves such that $\sB.\phi=\sB$, then $I=\{Id,\phi'\}$ would be a solution of \eqref{bb}. However we consider this solution to be trivial in the following sense: the formal sum $[\sB]+[\sB].\phi'=2[\sB]=0$ is itself vanishing mod $2$. Such trivial solutions are avoided in the case of higher genus closed surfaces as the work of \cite{birman2013finite} demonstrates, i.e. the identity element is the only mapping class which permutes $\sB$. Obviously parabolic type elements $\phi$, i.e. curve stabilizers $\phi\in MCG_\gamma$ satisfy$\sB \cap \sB.\phi \supset \{\gamma\}$. So naturally one is tempted to find formal solutions to (CS) by choosing a suitable sequence of parabolics. 
+\begin{lem}
+Let $I_0:=\{Id, \mu, \mu^2, \mu^3, \mu^4\}$. Then $\sum_{\phi \in I_0} \phi.B=0$ (mod $2$) and $I_0$ is a formal solution to (CS). 
+\end{lem}
+\begin{proof}
+The vanishing of the chain sum $\sum_{\phi \in I_0} \phi.B$ is clear. Moreover all the summands $\phi.B$ are distinct for $\phi \in I_0$ and this proves the formal solution is nontrivial.
+\end{proof}
 
-It is possible that finite subgroups of $\Gamma$ provide convenient solutions $I$ to (CS) in higher genus, as the examples in \cite{Cremona} demonstrate. The structure of finite subgroups in the genus $g=2$ mapping class group is however too limited. Thus we are forced to search out solutions to (CS) directly. While \eqref{bb} provides an explicit symbolic statement of (CS), it remains difficult to actually search for such solutions. The problem is to represent the action of the mapping class group on the simplicial curve complex $\sC$. The curve complex $\sC$ consists of free homotopy classes of simple closed curves $\alpha$ on $\Sigma$. The free homotopy class $[\alpha]$ corresponds to a conjugacy class in $\pi_1$. Therefore the curve complex consists of a special subset of ``simple" conjugacy classes $[\alpha]$. The algebraic characterization of those conjugacy classes which represent simple curves appears difficult problem.
+By computation using Mark C. Bell's curver [ref] we have found that the $I_0$-translates of $B$ is supported on ten curves. Given the formal solution $I_0$, we proceed in several steps. First we construct  the convex hull $$F:=conv( I_0.B )$$ over these ten curves constituting the $I_0$ translates of $B$. Then we need estbalish that the chain sum $$\underline{F}:=\sum_{\phi \in \Gamma} \gamma.F$$ has a \emph{well-separated gates structure} equal to $\Gamma.B$. The idea of well-separated gates is introduced in \cite[pp.13, \S 5.1]{martel}, and means $\uF=\sum_{i\in I} F_i$ is a countable chain sum of sets $F_i$ where the intersections $G:=F_{ij}:=F_i\cap F_j$ form a principal $\Gamma$-set.
 
-Here we find the question: 
+%To verify that $\uF$ has well-separated gates using Bell's curver program: [insert].
+%[Caution: Do we need be more careful about finite-index subgroups $\Gamma'$ and $\Gamma$?]
 
--\emph{How to symbolically compute the $\Gamma$-action $[\alpha] . \phi$ on $\sC$?} 
 
-To answer the above question would permit a brute force search for formal solutions to (CS). We would represent a neighborhood of the identity element in $\Gamma$ and then randomly search for formal solutions by directly evaluating the chain sums $\sum_\phi [\sB].\phi$ and their boundaries $\sum_\phi \del[\sB].\phi$ mod 2. Such a direct approach has been successfully applied to some low dimensional arithmetic groups, e.g. $\Gamma=PGL(\mathbb{Z}^q)$ for $q=1,2,3$, and formal solutions to (CS) have been found for $\Gamma=Sp(\bZ^4, \omega)$. 
 
-Another possibility arises though, based on Mark C. Bell's curver program \url{https://curver.readthedocs.io/en/master/index.html}. For we find the action of $\Gamma$ on $\sC$ is effectively computable. 
 
-Finally we remark that Professor I.V Nikolaev claims to have established the \emph{linearity} of the mapping class groups of closed surfaces \cite{nikolaev2018mapping}, \cite{nikolaev2001toric}, yet we find the articles rather difficult to understand and implement, being based on some results of $AF$ $C^*$-algebras, Perron-Jacobi convergents, Bratelli diagrams, etc.. If indeed a finite-dimensional representation of $MCG$ can be simulated, and a sufficient neighborhood of the identity can be represented in matrix form, then the search for formal solutions $I$ of (CS) can begin.
 
-\section{A Naive Possibility}
-The following naive possibility arises. Let $\rho:\pi \to GL_N$ be a linear finite-dimensional representation of $\pi:=\pi_1(\Sigma, pt)$ of a pointed closed Riemann surface. Let $N=N_{GL}(\rho)$ be the normalizer of the image of $\rho$ in $GL_N$. Then we find the image $Im(\rho)$ is a normal subgroup of $N$, and we obtain a quotient group $Im(\rho)\backslash N$ with a canonical homomorphism $$\chi_\rho: Im(\rho)\backslash N \to Out(\pi).$$
+\section{}
 
-\begin{prob}
-\label{fdrep}
-Does there exist a finite-dimensional linear representation $\rho$ of $\pi$ such that the homomorphism $\chi_\rho$ is surjective?
-\end{prob}
 
-A solution to Problem \ref{fdrep} would allow an effectively \emph{linear} representation of the elements of $MCG$. The question is whether embedding $\pi$ into a larger matrix group provides a larger class of outer automorphisms to be represented by matrix conjugation.
 
+
+
+
+
+
+
+
+
+ 
+
+
+%Thus we are forced to search out solutions to (CS) directly. While \eqref{bb} provides an explicit symbolic statement of (CS), it remains difficult to actually search for such solutions. The problem is to represent the action of the mapping class group on the simplicial curve complex $\sC$. The curve complex $\sC$ consists of free homotopy classes of simple closed curves $\alpha$ on $S$. The free homotopy class $[\alpha]$ corresponds to a conjugacy class in $\pi_1$. Therefore the curve complex consists of a special subset of ``simple" conjugacy classes $[\alpha]$. The algebraic characterization of those conjugacy classes which represent simple curves appears difficult problem.
 
 
 
@@ -369,14 +438,11 @@ A solution to Problem \ref{fdrep} would allow an effectively \emph{linear} repre
 
 
 
-%\subsection{Examples: Some Arithmetic Groups}
-%We have constructed formal solutions to (CS) for arithmetic groups $\Gamma=G(\bZ)$ in a few low-dimensional cases. These solutions were found using Wolfram MATHEMATICA. For example, the following subsets $I$ are (formal) solutions for the matrix groups $\Gamma=GL(\bZ^2)$, $GL(\bZ^3)$, $Sp(\bZ^4)$, respectively: [insert].
 
-%However we are yet unable to use Wolfram to identify formal solutions to [eqref]. Firstly this is because $MCG$ is not known to admit any linear representations, and secondly because we do not know how to ``encode" simple closed curves and their orbits under mapping class elements. Perhaps Thurston's train-tracks and $PML$ are the natural encoding, although we have not yet pursued this possibility.
+%\section{Well-Separated Gates: From (CS) To Candidate Spines}
+%Suppose the user succesfully Closes the Steinberg symbol, i.e. finds a finite subset $I$ of $\Gamma$ satisfying conditions \ref{cs}. Solutions to (CS) allow us to replace $\sT$ and rational excisions $\sT[t] \subset \sT$ with \emph{ a chain sum $\uF$ with \textbf{well-separated gates}}, a term which also appears in item \eqref{cs}(iv) in the definition of (CS). 
 
-
-\section{Well-Separated Gates: From (CS) To Candidate Spines}
-Suppose the user succesfully Closes the Steinberg symbol, i.e. finds a finite subset $I$ of $\Gamma$ satisfying conditions \ref{cs}. Solutions to (CS) allow us to replace $\sT$ and rational excisions $\sT[t] \subset \sT$ with \emph{ a chain sum $\uF$ with \textbf{well-separated gates}}, a term which also appears in item \eqref{cs}(iv) in the definition of (CS). This is a term introduced in \cite[pp.13, \S 5.1]{martel}, and means $\uF=\sum_{i\in I} F_i$ is a countable chain sum of sets $F_i$ where the intersections $G:=F_{ij}:=F_i\cap F_j$ have a well-behaved fixed geometry. In our applications the chain summands $F_i$ are convex excisions of the form $F_i=F[t]$ (see \cite[\S 5.5]{martel}). The idea is next that gated costs (see \cite[\S 5.2]{martel}) are determined by their restrictions to the summands $F_i$, and also by the gates $G\subset F_i$ which are contained in the given summand. Thus we reduce the study of costs on $\sT[t]$ to localized costs defined on the summands $F_i$ and with respect to the gates $G\subset F_i$. This reduces us to the setting of \cite[\S 5.9]{martel} where we studied various repulsion costs on convex excisions. 
+% In our applications the chain summands $F_i$ are convex excisions of the form $F_i=F[t]$ (see \cite[\S 5.5]{martel}). The idea is next that gated costs (see \cite[\S 5.2]{martel}) are determined by their restrictions to the summands $F_i$, and also by the gates $G\subset F_i$ which are contained in the given summand. Thus we reduce the study of costs on $\sT[t]$ to localized costs defined on the summands $F_i$ and with respect to the gates $G\subset F_i$. This reduces us to the setting of \cite[\S 5.9]{martel} where we studied various repulsion costs on convex excisions. 
 
 If $\uF$ is a chain sum with well-separated gates $\{G\}$, then the singularity locus $\sZ$ naturally decomposes as a chain sum $\sZ=\sum_i \sZ \cap F_i$, and where $\sZ \cap F_i$ is the singularity locus of a restricted semicoupling program, with respect to the restricted cost $c|F_i$. Best results are obtained with costs satisfying Properties (D0)--(D4) and we conjecture that the visibility costs satisfy (D0)--(D4) using the notation of \cite{martel}. Finally using the Reduction to Singularity method of \cite[Theorems 1.4.1-2]{martel}, we naturally construct continuous deformation retracts and which even assemble to global continuous retracts $\sT \leadsto \sZ$. 
 
