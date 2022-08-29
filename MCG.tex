@@ -10,7 +10,7 @@
 \usepackage{enumerate}
 \usepackage{geometry}
 %\usepackage{biblatex}
-%\usepackage{hyperref}
+\usepackage{hyperref}
 %\usepackage[autostyle]{csquotes}
 \usepackage{fancyhdr}
 \usepackage{graphicx}
@@ -107,7 +107,7 @@ This article introduces an algebraic problem we call Closing the Steinberg symbo
 %And equivariant retracts onto codimension one hypersurfaces is widely known in literature [ref]. But our method can readily produce larger codimension, even $codim_{\sT} \sZ > > 2$ when the target $\tau$ exhibits sufficient symmetries. 
 
 
-\section{$Mod(S)$ and Bieri-Eckmann Duality}
+\section{Mapping Class Group and Bieri-Eckmann Duality}\label{sec1}
 
 We let $S=S_g$ be a closed hyperbolic surface of genus $g \geq 2$, and let $\Gamma:=Mod(S)$ be the mapping class group of $S$. The topologists define $$Mod(S):=\pi_0(Diff_+(S))$$ as the group of orientation preserving diffeomorphisms of $S$ modulo isotopy. The algebraists define $Mod(S)$ via Dehn-Nielsen-Baer's theorem $$Mod(S)=Out(\pi_1(S))$$ where $\pi_1(S)=\pi_1(S, pt)$ is Poincar\'e's pointed fundamental group, see \cite{primer}.
  
@@ -130,7 +130,9 @@ The group-theoretic (co)homology of $\Gamma$ is defined via the symmetries of pr
 
 %There is further a canonical uniform source measure on $\sT_g$
 
-It is a fundamental observation of Harvey \cite{Harvey}, Harer \cite{Harer1986}, Ivanov \cite{ivanov2015virtual}, that $\Gamma$ is a Bieri-Eckmann virtual duality group \cite{BiEck}. Here a key role is played by the action of $\Gamma$ on the simplicial curve complex $\sC$ and its reduced singular homology and chain groups. Recall the curve complex $\sC=\sC(S)$ of the surface is the simplicial complex whose $0$-skeleton (vertices) $\sC^0$ consists of simple closed curves (modulo isotopy), and where a simplex exists between vertices $a,b,c,\ldots$ if the curves are simultaneously pairwise disjoint on $S$. For example in genus $g=2$, the curve complex $\sC(S_2)$ is a two-dimensional infinite simplicial complex. Obviously $\Gamma$ acts on $\sC$, c.f. \cite{Broaddus2012}. Now we present the formal definition of homological duality.
+It is a fundamental observation of Harvey \cite{Harvey}, Harer \cite{Harer1986}, Ivanov \cite{ivanov2015virtual}, that $\Gamma$ is a Bieri-Eckmann virtual duality group \cite{BiEck}. Strictly speaking we must replace $\Gamma$ with a finite-index torsion-free subgroup $\Gamma'$, however there is important role played by the torsion elements in $\Gamma$, as we illustrate below.
+
+A key role in our analysis is played by the action of $\Gamma$ on the simplicial curve complex $\sC$ and its reduced singular homology and chain groups. Recall the curve complex $\sC=\sC(S)$ of the surface is the simplicial complex whose $0$-skeleton (vertices) $\sC^0$ consists of simple closed curves (modulo isotopy), and where a simplex exists between vertices $a,b,c,\ldots$ if the curves are simultaneously pairwise disjoint on $S$. For example in genus $g=2$, the curve complex $\sC(S_2)$ is a two-dimensional infinite simplicial complex. Obviously $\Gamma$ acts on $\sC$, c.f. \cite{Broaddus2012}. Now we present the formal definition of homological duality.
 
 %[Below seems premature: invokes dualizing module \bD before definition]
 % See section [ss] below.
@@ -285,7 +287,12 @@ Suppose $I \subset \Gamma$ successfully Closes Steinberg (Definition \ref{cs}). 
 We can replace $\Gamma$ with a finite-index torsion-free subgroup $\Gamma'$ to ensure $\Gamma'$ acts freely on $X$, and therefore the diagonal action is free on $X[t] \times \del X[t]$. Moreover we can ensure $\Gamma'$ translates the flat-filled relative cycle $\gamma.[P]$, for $\gamma\in \Gamma'$ freely. Then $\gamma.[P] \neq [P]$ when $\gamma\neq Id$. The definition of Closing Steinberg implies distinct translates $F, F'$ are disjoint unless they intersect in a gate $G'=\gamma'.P$ for some $\gamma' \in \Gamma'$. So $\gamma.F$ equals $F$ only if $\gamma=Id$ is trivial. This proves the summands $\{\gamma.F~|~ \gamma\in \Gamma'\}$ of $\uF$ form a principal $\Gamma'$-set, and establishes (i). The existence of an interior point $x\in F$ which is simultaneously visible to the translates $P.I$ in $X[t]$ proves $F=conv[P.I]$ is a compact convex set, and homeomorphic to some cube. Thus $\uF$ is a chain sum of cubes, hence a cubical chain sum and therefore (ii). 
 \end{proof}
 
-%The above chain sum $\uF$ provides convenient global coordinate system on an open domain of $X$. In practice it allows us to parameterize the interior by boundary data, namely by the distances of an interior point to the boundary walls of the excision $\del X[t]$.
+The above chain sum $\uF$ provides a convenient global coordinate system on an open domain of $X$, namely the support of $\uF$. In practice we find the convex hull $F$ more computable and effective than the standard ``fundamental domain" of $\Gamma$ on $X$, which fundamental domain is noncanonical and noneffective. In the next section we illustrate these definitions with some explicit computations in genus $g=2$, namely $\Gamma = Mod(S_2)$.
+
+%Evenmore, there is nothing canonical about fundamental domains, yet our definition of $F$ seems more direct and explicit.
+
+
+%In practice it allows us to parameterize the interior by boundary data, namely by the distances of an interior point to the boundary walls of the excision $\del X[t]$.
 
 
 
@@ -352,13 +359,13 @@ We can replace $\Gamma$ with a finite-index torsion-free subgroup $\Gamma'$ to e
 
 
 
-\section{(CS) for Genus Two Mapping Class Group $(g=2)$}
+\section{Closing Steinberg for Genus Two Mapping Class Group}
 To illustrate our ideas, we now study the case of genus two closed Riemann surface. The duality theory of mapping class groups $\Gamma=Mod(S_g)$ for genus $g=2$ has been described by \cite{Broaddus2012}. For reference we include the following figure taken from \cite[Fig.10]{Broaddus2012}, see \eqref{br}.%Let $B$ be Broaddus' two-sphere in the curve complex $\sC$. 
 
-\begin{figure}\label{br}
+\begin{figure}
 \centering
 \includegraphics[width=0.4\textwidth]{broaddus-sphere-marked-new.png}
-\caption{Homologically nontrivial $2$-sphere in the curve complex $\sC$ of genus $2$ closed surface. Figure adapted from \cite[Fig.10]{Broaddus2012}}
+\caption{Homologically nontrivial $2$-sphere in the curve complex $\sC$ of genus $2$ closed surface. Figure adapted from \cite[Fig.10]{Broaddus2012}}\label{br}
 \end{figure}
 %Observe $B$ has nine vertices $\alpha_1, \alpha_2, \alpha_3,\beta_1, \beta_2, \beta_3.$ The sets of curves $\{\alpha_1, \alpha_2, \alpha_3\}$ and $\{\alpha_4, \alpha_5, \alpha_6\}$ are pants decompositions. The curves $\beta_1, \beta_2, \beta_3$ are separating curves on $\Sigma$. Then (CS) requires a finite subset $I \subset \Gamma$ such that the chain sum $$SUM [\{\alpha_i.\gamma, ~\beta_j.\gamma |~~i=1,\ldots,6,~~j=1,2,3, ~~\gamma \in I\}] $$ vanishes over $\bZ/2$-coefficients, i.e. such that $$\sum_{\gamma \in I} (\alpha_1.\gamma+\cdots+\alpha_6.\gamma+\beta_1.\gamma+ \beta_2.\gamma+ \beta_3.\gamma )=0 ~~ (mod~ 2).$$ 
 
@@ -371,19 +378,18 @@ The formal problem of (CS) for genus two surfaces has the following symbolic set
 \sB:= \sum_{i,j,k=1}^{3} \alpha_i+\beta_j+\gamma_k.
 \end{equation}
 
-Now finally we make the problem of (CS) totally explicit: 
+Now the problem becomes explicit: 
 \begin{dfn}
-A finite subset $I\subset \Gamma$ formally Closes Steinberg for the mapping class group $\Gamma$ of genus two closed surfaces if 
+A finite subset $I\subset \Gamma$ formally Closes Steinberg for the mapping class group $\Gamma:=Mod(S_2)$ of genus two closed surfaces if 
 \begin{equation}
-\sum_{\phi\in I} \sum_{\alpha\in \sB}\phi.\alpha=0, ~~mod~2
+\sum_{\phi\in I} \sum_{\alpha\in \sB}\phi.\alpha=0 ~~~(mod~2)
 \end{equation}
-
 where the zero element $0$ on the right hand side is the zero element in $V$, i.e. the constant zero-valued distribution on $\sC^0$. 
 \end{dfn}
 
-Symbolically the ``vanishing mod $2$" of the translates $\sum_{\phi\in I} \phi.\sB$ says there is an even number of coincidences between the translated curves $\phi.\alpha$ where $\phi\in I$, $\alpha\in \sB$. This can be implemented on python by iterated symmetric differences. For example if $\sB$ denotes the \emph{set} of curves defined in \eqref{bb}, then a finite subset $I=\{\phi_1, \ldots, \phi_n\}$ is formal solution to (CS) if and only if $$\phi_1. \sB \Delta \cdots \Delta \phi_n.\sB = \emptyset.$$ We can omit the parentheses since the symmetric difference $\Delta$ is an associative operator.
+The ``vanishing mod $2$" of the translates $\sum_{\phi\in I} \phi.\sB$ says there is an even number of coincidences between the translated curves $\phi.\alpha$ where $\phi\in I$, $\alpha\in \sB$. This can be implemented on python by iterated symmetric differences. For example if $\sB$ denotes the \emph{set} of curves defined in \eqref{bb}, then a finite subset $I=\{\phi_1, \ldots, \phi_n\}$ is formal solution to (CS) if and only if \begin{equation}\label{isd} (\phi_1. \sB) \Delta \cdots \Delta (\phi_n.\sB) = \emptyset.\end{equation} We can omit the parentheses since the symmetric difference $\Delta$ is an associative operator. Thus we view the equations \eqref{bb} and \eqref{isd} as equivalent, although \eqref{isd} is more useful in practice.
 
-Now we introduce some standard notation following \cite{nakamura2018generation}. Let $$\eta=aecf$$ be the order ten element in $Mod(S_2)$ and define $$\mu:=\eta^4.$$ Then $\mu$ is an order five element in $Mod$. If $a,b,c$ is a geodesic pant decomposition, then we define the chain sum $$B:=[a]+[b]+[c]+\mu.[a]+\mu.[b]+\mu.[c].$$
+As we indicated earlier, it's interesting to search for formal solutions of (CS) among the torsion elements of $\Gamma$. It's convenient to now introduce notation following \cite{nakamura}. Let $a,b,c,d,e,f$ be the standard set of Humphries generators for $\Gamma$. Then $$\eta=aecf$$ is an order ten element in $\Gamma$. If we define $$\mu:=\eta^4,$$ then $\mu$ is an order five element in $\Gamma$. If $a,b,c$ is a geodesic pant decomposition of $S$, then we define the chain sum $$B:=[a]+[b]+[c]+\mu.[a]+\mu.[b]+\mu.[c].$$
 
 \begin{lem}
 Let $I_0:=\{Id, \mu, \mu^2, \mu^3, \mu^4\}$. Then $\sum_{\phi \in I_0} \phi.B=0$ (mod $2$) and $I_0$ is a formal solution to (CS). 
@@ -392,31 +398,25 @@ Let $I_0:=\{Id, \mu, \mu^2, \mu^3, \mu^4\}$. Then $\sum_{\phi \in I_0} \phi.B=0$
 The vanishing of the chain sum $\sum_{\phi \in I_0} \phi.B$ is clear. Moreover all the summands $\phi.B$ are distinct for $\phi \in I_0$ and this proves the formal solution is nontrivial.
 \end{proof}
 
-By computation using Mark C. Bell's curver [ref] we have found that the $I_0$-translates of $B$ is supported on ten curves. Given the formal solution $I_0$, we proceed in several steps. First we construct  the convex hull $$F:=conv( I_0.B )$$ over these ten curves constituting the $I_0$ translates of $B$. Then we need estbalish that the chain sum $$\underline{F}:=\sum_{\phi \in \Gamma} \gamma.F$$ has a \emph{well-separated gates structure} equal to $\Gamma.B$. The idea of well-separated gates is introduced in \cite[pp.13, \S 5.1]{martel}, and means $\uF=\sum_{i\in I} F_i$ is a countable chain sum of sets $F_i$ where the intersections $G:=F_{ij}:=F_i\cap F_j$ form a principal $\Gamma$-set.
+We have implemented these calculations using Mark C. Bell's \href{https://pypi.org/project/curver/}{curver} program. Using curver the author has developed a jupyter \href{https://github.com/jhmartel/MCG/blob/master/2022-06-23-ClosingSteinbergGenusTwo.ipynb}{notebook} to search for more solutions of (CS) in genus $g=2$. For example, with curver we find that the $I_0$-translates of $B$ are supported on exactly \emph{ten} curves, where we are counting only the nonseparating curves in Broaddus' Figure \ref{br}. Indeed we use curver to compute the conjugacy action of mapping classes on Dehn twists, and using curvers ability to effectively distinguish conjugacy classes. This conjugacy action on Dehn twists is basically equivalent to the action of mapping classes on the curve complex $\sC^0$. 
+
+
+In our definition of (CS) we have distinguished between \emph{formal} solutions and the geometric solutions, namely those satisfying the further conditions of \ref{cs}. Given the formal solution $I_0$, we proceed in several steps to verify whether the geometric conditions are satisfied. First we need construct the convex hull $$F:=conv( I_0.B )$$ over these ten curves constituting the $I_0$ translates of $B$. Then we need estbalish that the chain sum $$\underline{F}:=\sum_{\phi \in \Gamma} \phi.F$$ has a \emph{well separated gates structure} equal to $\Gamma.B$. The idea of well separated gates is introduced in \cite[\S 5.1]{martel}, and we briefly review the definition. We say the chain sum $\uF=\sum_{i\in I} F_i$ has well separated gates, if the intersections $G:=F_{ij}:=F_i\cap F_j$ form a principal $\Gamma$-set. In other words, the intersections $F_{ij}$ are either empty or isometric to a fixed gate $G$. The verification of well separated gates is not readily performed on curver. This leads us to following computational problem, where $F=conv(I.B)$ is defined as above. 
+
+\begin{prob}
+Devise an effective algorithm by which the intersection of the convex hulls $F \cap \phi.F$ can be determined for mapping classes $\phi \in \Gamma$.
+\end{prob}
+
+
 
 %To verify that $\uF$ has well-separated gates using Bell's curver program: [insert].
 %[Caution: Do we need be more careful about finite-index subgroups $\Gamma'$ and $\Gamma$?]
 
-
-
-
-
-\section{}
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
 %Thus we are forced to search out solutions to (CS) directly. While \eqref{bb} provides an explicit symbolic statement of (CS), it remains difficult to actually search for such solutions. The problem is to represent the action of the mapping class group on the simplicial curve complex $\sC$. The curve complex $\sC$ consists of free homotopy classes of simple closed curves $\alpha$ on $S$. The free homotopy class $[\alpha]$ corresponds to a conjugacy class in $\pi_1$. Therefore the curve complex consists of a special subset of ``simple" conjugacy classes $[\alpha]$. The algebraic characterization of those conjugacy classes which represent simple curves appears difficult problem.
+
+
+
+
 
 
 
@@ -455,9 +455,46 @@ By computation using Mark C. Bell's curver [ref] we have found that the $I_0$-tr
 
 % In our applications the chain summands $F_i$ are convex excisions of the form $F_i=F[t]$ (see \cite[\S 5.5]{martel}). The idea is next that gated costs (see \cite[\S 5.2]{martel}) are determined by their restrictions to the summands $F_i$, and also by the gates $G\subset F_i$ which are contained in the given summand. Thus we reduce the study of costs on $\sT[t]$ to localized costs defined on the summands $F_i$ and with respect to the gates $G\subset F_i$. This reduces us to the setting of \cite[\S 5.9]{martel} where we studied various repulsion costs on convex excisions. 
 
-If $\uF$ is a chain sum with well-separated gates $\{G\}$, then the singularity locus $\sZ$ naturally decomposes as a chain sum $\sZ=\sum_i \sZ \cap F_i$, and where $\sZ \cap F_i$ is the singularity locus of a restricted semicoupling program, with respect to the restricted cost $c|F_i$. Best results are obtained with costs satisfying Properties (D0)--(D4) and we conjecture that the visibility costs satisfy (D0)--(D4) using the notation of \cite{martel}. Finally using the Reduction to Singularity method of \cite[Theorems 1.4.1-2]{martel}, we naturally construct continuous deformation retracts and which even assemble to global continuous retracts $\sT \leadsto \sZ$. 
 
-N.B. Constructing the retraction is contingent on the user having an effective computable model of $\sT$ available. Solutions to (CS) allow us to localize all computations onto the local chain summands. Generally $\sZ$ has large codimension in $\sT$ depending on so-called Uniform Halfspace Conditions. Symmetries in the excision boundary (and target measure) on $\del \sT[t]$ increases the maximal codimension of $\sZ$ with the possibility of attaining the extreme codimension, even the equivariant spine of $\sT$. 
+\section{Closing Steinberg and Reduction to Singularity}
+
+%Now we describe how solutions to (CS), and especially the chain sum $\uF$ with well separated gates, lead to constructive equivariant deformation retracts of $\sT$ to small-dimensional subvarieties $\sZ$.
+
+Our goal in this final section is to indicate how solutions to (CS) satisfying Definition \ref{cs} lead to constructive equivariant retracts of $\sT$ onto subvarieties $\sZ$ with large codimensions. In \S \ref{sec1} we described how the mapping class group is a Bieri-Eckmann duality group having a very important $\bZ \Gamma$ module called the Steinberg module. The topology of this module essentially controls the virtual cohomological dimension of the group and the codimension of equivariant retracts. In fact the spine is essentially Poincare-Lefschetz dual in the sense of intersection theory to the Steinberg symbol, and the max codimension spine will geometrically intersect every flat filled Steinberg symbol in a point.
+
+
+
+
+
+
+
+%It is difficult a priori to control the codimension of $\sZ$, see our remarks below. 
+
+
+
+%This is the main idea developed in the author's thesis \cite{martel}. The hypotheses on $\uF$ are convenient to construct and solve optimal semicoupling programs on $\sT$. Here we use the term ``subvariety" to designate a locally Lipschitz subspace of $\sT$. In practice, the subvarieties $\sZ$ will be defined by explicit equations derived from Kantorovich dual potentials.
+
+
+As we described earlier, we begin with a $\Gamma$-rational excision $\sT[t]$ of $\sT$ with respect to a sufficiently small equivariant parameter $t$. Thus we obtain a manifold-with-corners $(\sT[t], \del \sT[t])$. The rationality implies that $\Gamma$ acts proper discontinuously on $\sT[t] \times \del \sT[t]$, and therefore there exists nontrivial equivariant Borel-Radon measures on $\sT[t]$ and $\del \sT[t]$. This means we can study optimal semicoupling programs between source measures $\sigma$ on $\sT[t]$ to target measures $\tau$ on $\del \sT[t]$ with respect to continuous costs $c:\sT[t] \times \del \sT[t] \to \bR_{\geq 0}$. Here the source $\sigma$, target $\tau$, and cost $c$, need to be chosen a priori by the practitioner to begin studying the $c$-optimal semicouplings from $\sigma$ to $\tau$. In practice we take $\sigma$ and $\tau$ to be the uniform Lebesgue measures on $\sT[t]$ and $\del \sT[t]$ respectively. The Lebesgue measure is defined uniquely up to a multiplicative constant, and our semicoupling hypothesis requires only that $\rho:=\int \sigma / \int \tau >1$ be arbitrarily close to unity, i.e. $\rho\approx 1^+$. The choice of cost $c$ is more interesting, as our thesis finds best results are obtained with \emph{repulsion costs}. The physical idea is to imagine $\sigma$ and $\tau$ as distributions of negative electrical charges, and the semicoupling program looks for an energy-minimizing correlation of some variable amount of source charges from $\sigma$ to the fixed target charge $\tau$. However the evaluation of such energy costs is not easy, and we use solutions of (CS) to construct more effectively computable costs, namely our so-called gated repulsion costs \begin{equation} \underline{c}:(\uF \cap \sT[t]) \times (\uF \cap \del \sT[t])  \to \bR_{>0} \cup \{ +\infty \}. \label{gatedcost} \end{equation}
+
+As demonstrated in the author's thesis \cite{martel} and \cite{martel2022}, if $\underline{c}$ is a gated repulsion cost, then we obtain a contravariant functor $$Z: 2^{\del \sT[t]} \to 2^{\sT[t]}, ~~~~~~Y_I \mapsto Z(Y_I) =  \cap_{y\in Y_I} \del^c \psi(y), $$ where $\psi=\psi^{cc}$ is the $c$-concave Kantorovich potential defined by the maximizers of the dual Kantorovich program. We refer the reader to the above papers for details, but the functor and our topological deformation retract theorems lead to a singularity locus $\sZ \hookrightarrow \sT[t]$ such that the inclusion is a strong deformation retract. The exact dimension of $\sZ$ depends on a local criterion we call Uniform Halfspace Condition, but generally it can be expected that $codim_{\sT[t]} \sZ\geq 2$. Symmetries in the excision boundary and target measure on $\del \sT[t]$ increases the maximal codimension of $\sZ$ with the possibility of attaining the \emph{maximal} codimension, even the equivariant spine of $\sT$. The gated structure on $\uF$ and $\underline{c}$ allows us to localize all computations to local chain summands $F$ of $\uF$. If $\uF$ is a chain sum with well-separated gates $\{G\}$, then the singularity locus $\sZ$ naturally decomposes as a chain sum $\sZ=\sum_i \sZ \cap F_i$, and where $\sZ \cap F_i$ is the singularity locus of a restricted semicoupling program, with respect to the restricted cost $\underline{c}|F_i$. Using the Reduction to Singularity method of \cite[Theorems 1.4.1-2]{martel}, we naturally construct continuous deformation retracts which assemble to global continuous retracts $\sT \leadsto \sZ$. 
+
+Further details and explicit computations are still required, and this article does not claim to positively construct any spines of the mapping class groups. The author's constructions are obstructed by the inability to positively verify the well separated gates structure of the chain sums arising from solutions to Definition \ref{cs}. However if Teichmueller space $\sT$ was more computable, i.e. if we could explicitly parameterize $\sT$ and compute the energies of negative electric charge distributions like in Euclidean space, then we could more readily compute solutions to the optimal transport programs, and more importantly the homotopy types of the singularities. 
+
+
+%\section*{Acknowledgement}
+
+
+
+
+
+
+
+
+
+
+
+% Generally $\sZ$ has large codimension in $\sT$ depending on so-called Uniform Halfspace Conditions. 
 %\section{On Canonical Geometric $E\Gamma$ models.}
 
 %[INCOMPLETE]
