@@ -1,0 +1,283 @@
+\documentclass[12pt]{article}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsopn}
+\usepackage{amsthm}
+\usepackage{latexsym}
+\usepackage[all]{xy}
+\usepackage{enumerate}
+\usepackage{geometry}
+%\usepackage{biblatex}
+%\usepackage{hyperref}
+%\usepackage[autostyle]{csquotes}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{float}
+
+\usepackage[
+    backend=biber,
+style=alphabetic,
+sorting=nyt,
+bibencoding=utf8,
+   % style=authoryear-icomp,
+    %sortlocale=de_DE,
+    %natbib=true,
+    %author=true,
+%style=verbose,
+%journal=true,
+%url=true, 
+%    doi=false,
+%    eprint=true
+]{biblatex}
+\addbibresource{STABLEreferencesX.bib}
+
+\usepackage[]{hyperref}
+\hypersetup{
+    colorlinks=true,
+}
+
+%\newcommand{\fh}{\mathfrak{h}}
+
+%\newcommand{\bC}{\mathbb{C}}
+%\newcommand{\bR}{\mathbb{R}}
+%\newcommand{\fB}{\mathfrak{B}}
+%\newcommand{\bZ}{\mathbb{Z}}
+%\newcommand{\bQ}{\mathbb{Q}}
+%\newcommand{\bq}{\bar{Q}[t]}
+%\newcommand{\bb}{\bullet}
+%\newcommand{\del}{\partial}
+%\newcommand{\sE}{\mathscr{E}}
+%\newcommand{\mR}{\bR^\times_{>0}}
+%\newcommand{\conv}{\overbar{conv}}
+%\newcommand{\bb}{\bullet}
+%\newcommand{\sub}{\del^c \psi^c(x')}
+%\newcommand{\hh}{\hookleftarrow}
+%\newcommand{\bD}{\mathbb{D}}
+%\newcommand{\Gm}{\mathbb{G}_m}
+
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem*{prob}{Problem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{question}[thm]{Question}
+\newtheorem*{hyp}{Hypothesis}
+\theoremstyle{definition}
+\newtheorem{dfn}[thm]{Definition}
+\newtheorem{exx}[thm]{Example}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newcommand{\fh}{\mathfrak{h}}
+\newcommand{\bn}{\mathbf{n}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\fB}{\mathfrak{B}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bQ}{\mathbb{Q}}
+\newcommand{\bq}{\bar{Q}[t]}
+\newcommand{\bb}{\bullet}
+\newcommand{\del}{\partial}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\mR}{\bR^\times_{>0}}
+\newcommand{\hh}{\hookleftarrow}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\Gm}{\mathbb{G}_m}
+\newcommand{\uF}{\underline{F}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\bX}{\overline{X}^{BS/\bQ}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\hS}{\hat{S}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sZ}{\mathscr{Z}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\oh}{\bullet}
+
+
+\begin{document}
+
+\title{}
+\author{J. H. Martel}
+\date{\today}
+%\email{jhmartel@protonmail.com}
+%\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+
+%\tableofcontents
+
+\section{}
+
+Let $\sT$ be the Teichmueller space of marked hyperbolic structures on a closed compact surface of genus $g\geq 2$. Let $S\in \sT$ be a reference hyperbolic surface. Every surface $S'$ (rel $S$) can be represented uniquely by a holomorphic quadratic differential $q=q_{S'}$ on $S$, namely the Hopf differential $q=dw$ where $w$ is the unique harmonic map transporting the hyperbolic structure from $S$ to $S'$. [ref: Wolf, Hopf]. Thus we choose an explicit parameterization $(\sT, S) \approx Q(S)$, and we study surfaces via this correspondance $S'$ rel $S$ $\mapsto q=q_{S'} \in Q(S)$. Obviously $S$ (rel $S$) is represented by the zero differential $q=0$ in $Q(S)$. 
+
+\begin{lem}
+The assignment ($S'$ rel $S$)$\mapsto q$ defines continuous map $(\sT, S) \to Q(S)$. 
+\end{lem}
+\begin{proof}
+
+\end{proof}
+
+Now we define the so-called \emph{spectral cover} of $S$ relative to $q\in Q(S)$. The following references are useful: [ref: Bridgeland-Smith, Roman Contreras, Thurston]. The spectral cover $\hS$ relative to $q$ is the unique double cover of $S$ which is ramified over the odd multiplicity zeros and poles of $q$. Let $p:\hS \to S$ be the covering map, and let $\tau$ be the deck transformation $\tau: \hS \to \hS$ satisfying $\tau \circ \tau =Id$. In the double cover $\hS$ the quadratic $\hat{q}$ splits as the square of an abelian differential $\omega$.
+
+
+The basic idea in this article is to study \emph{periods} of $\omega$ as length-type functions on $\sT$.  Thus for curves $\hat{a}$ on $\hS$, we replace the study of length functions $\ell_a (S)$ with the period integrals $\int_{\hat{a}} \omega$ on $\hS$. The distinction is that $\ell_a(S)$ is not a homotopy-invariant of the curve $a$, and the length needs be computed as a minimum over all isotopies of $a$ on $S$. Here $\hat{a}$ will be a homology class in the ``hat" homology group $\hat{H}(q):= H_1(\hS)^-$. The periods are topological and invariant with respect to isotopy. The involution $\tau$ acts on the homology group $H_1(\hS)$ and we find a splitting into $(+1)$ and $(-1)$ eigenspaces $H_1(\hS)=H^+ \oplus H^-$. We find $H^+ \approx H^1(S)$ has real dimension $2g$ when $\del S=\emptyset$, and $H^-$ has real dimension $6g-6$ when $\omega$ is holomorphic. The identity $\tau (\omega)=-\omega$ implies that the periods $\int_a \omega$ vanish on the $\tau$-invariant subgroup $H^+$. Thus the study of periods on $\hS$ is restricted to the $\tau$ anti-invariant cycles. 
+
+Now we define a type of transfer map from $t_*: H_1(S) \to \hat{H}$. Let $a$ be a homology cycle in $H_1(S)$. If $a$ is a nonzero homology class in $S$, then $a$ has two oriented lifts $a_1$, $a_2$ in $\hS$. We define $\pm t_*(a):=\pm(a_1-a_2)$ as the transfer homomorphism $t_*: H_1(S) \to \hat{H}$. The definition of $t_*$ implies $t_*(a)$ is $\tau$ anti-invariant. In terms of the involution we have $\tau(a_1)=a_2$ and the cycle $t_*(a)$ can be represented $t_*(a)=a_1-\tau(a_1)$ where $a_1=\tilde{a}$ is a lift of $a$. It's clear that $t_*(a)$ projects to a trivial homology class on $S$, where $p_*(t_*(a))=p_*(a_1)-p_*(a_2)=a-a=0$. Moreover we find $t_*(a)=0$ if and only if $a_1=\tau a_1$ in $\hat(H)$. If the lifts are non homologous in $\hS$ then $t_*(a)\neq 0$ in $\hat{H}$. The definition of $tr_*(a)$ is ambiguous up to sign, but we obtain well-defined periods $\int_{tr_*(a)}\omega=\int_{a_1-a_2}\omega$ via the identity $\int_{a_1} \omega = -\int_{a_2} \omega$. 
+
+\begin{lem}
+For given curve $\hat{a}$, the period $\int_{\hat{a}} \omega$ varies continuously with $S'$ rel $S$.
+\end{lem}
+
+\begin{lem}
+For given curve $\hat{a}$, the derivative of the composition $S' \mapsto q \mapsto \int_a \omega $ is equal to [??]. 
+\end{lem}
+
+
+Everything can be visualized if we begin with a geodesic pants decomposition of the basepoint $S$. Then we have two pairs of hyperbolic pants. We imagine on these two dimensional pair of paints all quadratic differentials with two zeros of degree three on each pant. This makes a total of four zeros of degree three. 
+
+\begin{lem}
+The transfer homomorphism $tr_*: H_1(S) \to \hat{H}$ is injective. What is the complementary subspace in $\hat{H}$? How do homologically trivial curves on $S$ lift to cycles in $\hS$? 
+\end{lem}
+
+
+
+\section{Does there exist length-length coordinates on Teichmueller space?}
+
+It is well known that the \emph{saddle connections} between the zeros and poles of $q$ generate the hat homology $\hat{H}$. [Ref: Roman]. 
+
+Now let us suppose that the above maps are sufficiently continuous relative to the basepoint $S_0$. Then instead of studying the length functionals $\ell_a(S)$ on $\sT$, we rather study the period maps $q\mapsto \int_{\hat{a}} \hat{q}^{1/2}$ relative to $S_0$. Again, the period maps vanish identically at the basepoint $S_0$ and we view the periods of $S$ as defined relative to $S_0$. With the period maps we say the surfaces $S, S'$ are \emph{$\epsilon$-close} rel $S_0$ if the periods are $\epsilon$-close relative to a set of curves $a,b,c, \ldots$ on $S_0$. 
+
+We briefly consider the transfer homomorphisms $p_{\sharp}:H_*(S) \to H_*(\hat{S})$. The existence of such a well-defined morphism is consequence of [ref: L.Smith, ``Transfer and Ramified Coverings"].  The map $p_\sharp$ has the usual property that $H_*(p) \circ p_\sharp$ acts like ``multiplication by two" on $H_*(S)$. Using the tranfer morphism we can consider $H_1(S)$ as canonically embedded into $H_1(\hat(S))$. Now the question is to determine the image of the transfer morphism in the hat homology group $\hat{H}$.
+
+Remark. Closing Steinberg symbols on the curves of $S$ will not all lift to the hat homology group. Therefore did we not find the correct curve system for (CS)? I.e. need to solve (CS) for elements in hat group? For the translates will not span sufficiently many dimensions in hat group! 
+
+\section{}
+Let $S$ be a hyperbolic Riemann surface. There are many equivalent descriptions of the ``hyperbolic" structure on $S$. We can equip $S$ with an almost-complex structure $J$, or we can equip $S$ with a constant curvature metric $g$. The Teichmueller space $\sT=Teich(S)$ is the parameter space of all marked hyperbolic structures on $S$. The cotangent space $T^*_S\sT$ of Teichmueller space at $S$ is canonically identified with $Q(S)$, the vector space of holomorphic quadratic differentials on $S$. The Riemann-Roch theorem [ref] says that $Q$ is a complex vector space of dimension $3g-3$. Recall that an abelian differential is a closed meromorphic $1$-form $\omega$ on $S$. The abelian differential is said to be ``of the first kind" if $\omega$ is holomorphic (no poles). 
+
+\begin{lem}[Max Noether [ref: Linear Dependance Relations]]
+If $S$ is hyperbolic surface of genus $g\geq 2$, then $Q(S)=A^{\otimes 2}$. 
+\end{lem} 
+The lemma does not imply that $q=\omega^{\otimes 2}$ for every $q\in Q$. Rather it says that we can always represent $q=\sum \omega_i \otimes \omega'_i$ for suitable abelian differentials $\omega, \omega'$ on $S$. However it is known that $q=\omega^2$ for all $q$ in a large open stratum on $Q$. [Ref: Douady-Hubbard].
+
+The advantage to using the symmetric square $Q=A^{\otimes 2}$ is that we can readily define linear forms $Q\to A$ and $Q \to \bC$ using linear forms $A \to \bC$. For example if $[a]$ is a curve representing a homology class $\neq 0$ on $H_1(S; \bC)$, then $\lambda_a(\omega):=\int_a \omega$ is a well-defined linear functional on $A$. Moreover we obtain a linear functional $Q \to A$ by linearly extending the rule $\omega\otimes \omega' \mapsto \lambda_a(\omega)\omega'$. Likewise for a given pair of curves $a,b$ on $S$ we obtain linear functionals $Q \to \bC$ defined by the rule $\omega \otimes \omega' \mapsto \lambda_a(\omega) \cdot \lambda_b (\omega')$. Here it was essential that $Q=A^{\otimes 2}$ for otherwise the function $\lambda_a$ is not a well-defined linear functional for arbitrary $1$-forms on $S$. 
+ 
+Given $Q=Q(S)$ is canonically isomorphic to the cotangent space $T^*_S \sT$ at the (marked) surface $S$, the linear functionals $Q \to \bC$ of the form $\lambda_a \otimes \lambda_b$ appear as a type of complex tangent vector on $Q$.
+
+
+
+
+\begin{lem}
+Fix a curve $[a]\neq 0$. Then $\lambda_a\otimes \lambda_a$ represents a linear functionall
+\end{lem}
+ 
+ 
+ 
+If $a$ is a curve representing a homology class $[a]\neq 0$ on $S$, then for every closed $1$-form $\phi$ on $S$ we obtain a well-defined functional $\phi\mapsto \int_a \phi$. Moreover the functional is defined on the homology class $[a]$ of the curve, and satisfies important additivity relation $\int_{[a]+[b]}=\int_{[a]}+\int_{[b]}$ when restricted to closed $1$-forms on $S$. 
+
+If $q$ is a holomorphic quadratic differential on $S$, then $q^{1/2}$ represents a well-defined closed $1$-form on $S$? 
+
+It's widely known fact that the cotangent space to $Teich$ at $S=S_0$ can be defined as the vector space of holomorphic quadratic differentials on $S$. Here holomorphicity is with respect to the complex structure structure on $S$. In terms of real coordinates $(x,y)$ on the surface, the quadratic differential 
+
+%Given a family of curves $[a], [b], [c], \ldots$ on the surface $S$, we want ot
+
+Now our goal is to identify points of $Teich$, i.e. pairs $(S,f)$ of marked Riemann surfaces with closed $1$-forms on $S$. Then we obtain functionals $\phi \mapsto \int_{[a]}\phi \in \bR$. 
+
+If $a,b,c,d$ is canonical homology basis, however we find the period maps $\phi \mapsto \int_{a}$ are linearly \emph{independant} in $H_1(S, \bR)$. What happens in the spectral cover? Is there any surprising linear dependance relation, e.g. something like $1=a+b+c+d$. Then convex hull over the four quadratic forms defines a three-dimensional body. 
+
+
+%If quadratic holomorphic differentials is the tangent space of $Teich$, then...
+
+\section{}
+In the previous section we described how the various models of hyperbolic geometry are different sections of a projectivization. However these sections do not necessarily have a tractable ``convex hull" construction because the natural convex hull arises in the projective structure, and is invisible in the section.
+
+Now we turn our attention to the Teichmueller space of closed hyperbolic surfaces. If we pursue the analogy for Teichmueller space, we find the following propositions:
+\begin{itemize}
+\item[-] that Teichmueller space $Teich(S)$ is a noncanonical section of a projective variety; and
+\item[-] need discover the canonical Voronoi projective model satisfying the hypotheses $(1.1)--(1.3)$ for the mapping class group $\Gamma = MCG(S)$. 
+\end{itemize} 
+
+In the previous section we exclusively considered $GL(\bR^2)$. However it is evident that $GL(\bQ^2)$ and $GL(\bZ^2)$ also obtain continuous actions defined over the convex hulls of rational states. Specifically the hull generated by rational extreme points. For example $PGL(\bZ^2)$ naturally acts on the integral and rational states $P$ on $\bZ^2 \subset \bQ^2 \subset \bR^2$. 
+
+For the mapping class group the correct ``Riemann state" might be sum of squares of projective length functionals $$P[S]:=\sum'_{\alpha}  (\ell_\alpha (S)/\ell_\alpha(S_0))^2$$ relative to finite collections of homotopically nontrivial simple closed curves $\alpha$, where $S_0$ is a reference state. It's useful to define all our formulas projectively and with respect to a basepoint.  
+
+For our constructions, it is convenient to have a model of $Teich$ with well defined geodesic convex hulls. This is difficult business, and requires studying the various metrics $d'$ defined by diverse authors. 
+
+Let $S$ be a closed hyperbolic surface with genus $g\geq 2$, with mapping class group $\Gamma=Mod_+(S)$ and let $X:=E\Gamma \approx Teich(S)$ be a model of the Teichmueller space. 
+
+There is large literature on the properties of diverse $\Gamma$-invariant proper metrics $d'$ on $Teich(S)$, each with their own properties, e.g. Teichmuellers extremal length metric $d_{T}$, or the Weil-Petersson metric $d_{WP}$, or McMullen's $1/l$ metric. 
+
+From my point of view, the complete metrics on the $Teich(S)$ cell are not that useful for the homological study of $\Gamma$ because the action of $\Gamma$ on the compact sphere at infinity admits no nontrivial Borel measures. 
+
+But $X\approx Teich(S)$ does admit a canonical symplectic structure via Wolpert's twist-length formula $\omega_{WP}:=\sum_{a\in P} d\ell_a \wedge d\tau_a$, where $P$ is a pant splitting over the surface $P$. 
+
+
+
+\section{}
+Another problem: we have our candidate solution $I=\{\mu^i~|~i=0,1,2,3,4\}$ to Closing the Steinberg symbol in genus $g=2$. 
+\begin{itemize}
+\item[2.1] Need the convex hull of $P=conv(\xi)$ to be three-dimensionsal in the model of $Teich$. 
+\item[2.2] Need construct $F=conv(I.\xi)$ the convex hull of the $I$-translates of $\xi$. 
+\item[2.3] Need the chain sum $\underline{F}=\sum_{\gamma \in \Gamma} \gamma . F$ to have well-separated gates structure $\{G\}$ equal to $\Gamma$-translates of $P$.
+\end{itemize}
+
+The condition $2.1$ is tricky, for Broaddus' two-sphere (see Fig.10 in [ref]) is a deceiving image. Indeed while the surface of Broaddus' sphere $B$ is two-dimensional, there is no canonical filling of this sphere to a three-dimensional ball in $Teich$. For generic metrics $d'$ on $Teich$, we would expect the generic convex hull of six points to be five dimensional, not three! 
+
+If we restrict ourselves to a section, i.e. hypersurface model of $Teich$, then the convex hull is extremely difficult to control. [ref: Maxime-Bourque].
+
+Barycentre fibre: How to compute the dimension of the convex hull: requires computing the dimension of the barycentre fibre as the kernel of a linear map. 
+
+
+\section{}
+Given the pant decomposition and its dual we obtain a filling collection of curves on the surface. We say a hyperbolic surface is orthogonal relative to the filling collection if the geodesic representatives of the filling curves intersect orthogonally if they intersect at all. This is obviously the image of the Fenchel-Nielsen length parameters with zero twisting parameter relative to a pant decomposition. There is ambiguity in which pant decomposition describes the image of orthogonal surfaces for a given collection of curves $C$, and this ambiguity is similar to the Weyl groups in the Bruhat-Tits theory of linear algebraic groups. We let $P=P(C)$ be the subset of $\sT$ consisting of all surfaces which are orthogonal relative to the filling collection $C$. We view $P$ as a ``panel" in $\sT$. Let $I:=\{Id, \mu, \mu^2, \mu^3, \mu^4$ be the formal solution to (CS) obtained in [section]. The orbits $\mu^k.P$ of the panel are specially interesting for our applications. 
+
+For a given hyperbolic surface $(S,g)$ we need to assume the existence of well-defined projection maps $proj_P: \sT \to P$ from a given point to the $C$-orthogonal surfaces $P=P(C)$. We require the projection to be equivariant with respect to the action of $Mod(S)$ on the surface and the curve collection $C$. 
+
+
+
+
+
+
+
+
+Consider the orbit of the panel $\sP.\phi$ with respect to the mapping class group $\phi\in Mod(S)$. The orbit is basically disjoint in $\sT$, except for parabolic elements which fix the vertices.
+
+
+\section{Length-Length Coordinates}
+
+Let $S$ be closed hyperbolic surface with genus $g\geq 2$. Let $Teich(S)$ be the Teichmueller space of $S$. It's well known that $Teich(S)$ is diffeomorphic to a (6g-6)-dimensional cell, where a coordinatization is given by the Fenchel-Nielsen length-twist coordinates $\{(\ell_a, \tau_a) \}_{a\in P}$ associated to a pant decomposition $P$ of $S$. 
+
+Question: can we replace the twist parameters with length parameters of other curves, and thereby replace the "length-twist" coordinates with "length-length" coordinates on $Teich(S)$? 
+
+Related question: are any formulas known which express the twist differentials $d\tau_a$ with linear combinations of length differentials $d\ell_{a'}$ in Wolpert's formula for the Weil-Petersson symplectic form $\omega_{WP}=\sum_{a\in P} d\ell_a \wedge d \tau_a$ ? I.e. can we express $\omega_{WP}$ using only differentials of length functions? 
+
+The same question: if we are given a hyperbolic surface $S'$ with known length parameters relative to a pant decomposition, then what metric properties on the surface $S'$ do we use to identify the twist parameters $\{\tau_a\}_a$?  
+
+Remark. This question risks being a [duplicate.][1] However we find the answer to the above question unsatisfactory, as indicated by our comments below. 
+
+In genus $g=2$ we obtain the following almost canonical collection of six simple closed curves on the surface $S$. The value of the lengths of the green curves do not distinguish between left and right Nielsen twists along the red curves. However the derivatives of the lengths of the green curves *do* distinguish between left and right Nielsen twists along the red curves. This is similar to how the derivatives of strictly convex functions $f: \mathbb{R}^3 \to \mathbb{R}$ are injective where $Df(x_1)=Df(x_2)$ if and only if $x_1=x_2$. Here we are assuming that the lengths of the green curves are basically convex functions in the Neilsen twist parameters in the red curves.
+
+[![The lengths of the red curves plus their angles of intersection coordinatize Teichmueller space. Wolpert's work shows the differentials of the lengths of the green curves are parameterized by the angles of geodesic intersections between the red and green curves.][2]][2]
+
+Answer: Consider genus $g=2$. Let $t(a)$, $t(b)$, $t(c)$ be the Nielsen tangent vectors in Teich defined by the red geodesic pant decomposition $\{a,b,c\}$. Let $\{a', b', c'\}$ be the "dual pant". Then I propose that the functions $$\ell_a, \ell_b,\ell_c$$ together with the cosines of the angles of intersection 
+ $$d\ell_{b'}(t(a)), d\ell_{c'}( t(b)), d\ell_{a'}(t(c)))$$
+are globally well defined coordinates on Teichmueller space, i.e. an injective continuous map $\sT \to \bR^6$. Notice the collection is of cardinality $6g-6=6$ for genus $g=2$. So they are not (length, length) coordinates, but (length, "d"length) coordinates. Here I'm assuming all of Wolpert's work, especially pp.252 in Wolpert's 1983 paper referenced by Alex Nolte's answer. 
+
+Likewise if we use Wolpert's Reciprocity formula $d \ell_a (t(b))=-d\ell_b(t(a))$, then we obtain another "reciprocal" global coordinate system on Teich. The idea is that the angles of geodesic intersection are effective parameters of the Nielsen twist parameter along the pant cuffs.
+
+
+
+
+\printbibliography
+
+\end{document}
