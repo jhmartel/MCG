@@ -80,7 +80,7 @@ bibencoding=utf8,
 
 \begin{document}
 
-\title{Closing Steinberg Symbols of the Mapping Class Group}
+\title[Closing Steinberg Symbols of Mapping Class Groups]{Closing Steinberg Symbols of Mapping Class Groups}
 \author{J. H. Martel}
 \date{\today}
 \email{jhmartel@proton.me}
@@ -165,9 +165,11 @@ Most importantly for the mapping class group $\Gamma$, the dualizing module $\bD
 The problem of (CS) is based on homological properties of $\Gamma$, and specifically a representation of Bieri-Eckmann's dualizing module $\bD$ with the reduced homology of an excision boundary $\bD\approx \tilde{H}_*(\del \sT[t]; \bZ)$, where $\sT[t]$ is a maximal $\Gamma$-rational excision of Teichmueller space for a sufficiently small parameter $t$. We elaborate below.
 
 \section{Canonical Riemannian metrics on $\sT_g$ and Flat Filling}\label{s2}
-In this section we describe geometric properties which are required on $\sT$ for our constructions to be effective. The difficulty is that there is no canonical Riemannian metric on $\sT$, although there is a canonical symplectic form (c.f. Wolpert, Kerkhoff, et. al). The construction of $\Gamma$ equivariant metrics $d$ on $\sT$ is non canonical and there are many candidates. Popular metrics are Teichmueller's original metric $d_{Teich}$ \cite{hubbard},  Weil-Peterson's metric $d_{WP}$ \cite{hubbard}, Thurston's metric \cite{wolpert1986a}, or McMullen's \cite{mcmullen2000moduli}. 
+The Teichmueller space $X=Teich(S)$ is not immediately constructible from its definition and Teichmueller's theorem that $X$ is topologically homeomorphic to a $(6g-6)$ cell remains somewhat abstract. The geometrization of $X$ requires a choice of $G$-equivariant structure, for example an equivariant Riemannian metric. Popular constructions of $G$-equivariant metrics $d$ on $X$ include Teichmueller's original metric $d_{Teich}$ \cite{hubbard},  Weil-Peterson's metric $d_{WP}$ \cite{hubbard}, Thurston's metric \cite{wolpert1986a}, or McMullen's \cite{mcmullen2000moduli}. But none of these constructions appear satisfactorily canonical, although Weil-Peterson's $d_{WP}$ has the most convenient geometric properties thus far.
 
-For a choice of invariant Riemannian metric $d$ on $\sT$ and invariant function $$t: \sC^0 \to \bR_{>0}$$ we define an excision $\sT[t]$ of $\sT$ by excising (``scooping out") horoballs centred at various $\Gamma$-rational points at-infinity $\lambda$ and with radius $t(\lambda)$. We focus on these $\Gamma$-rational horoballs of $\sT$ because they have $\Gamma$-invariant boundary horospheres. Thus $\Gamma$ acts proper discontinuously on both $\sT[t]$ and $\del \sT[t]$, and we obtain the important diagonal action $$\Gamma \times \sT[t] \times \del \sT[t] \to \sT[t] \times \del \sT[t]. $$ We further emphasize those parameters $t$ which are sufficiently small, in which case the excisions $\sT[t]$  have a $\Gamma$-equivariant topological boundary $\del \sT[t]$ with the homotopy-type of $\sC$. This important fact implies a canonical equivariant isomorphism \begin{equation}\label{caniso}
+
+
+The choice of invariant Riemannian metric $d$ enters into our constructions by our application of \emph{excisions}. More specifically for a choice of invariant Riemannian metric $d$ on $\sT$ and invariant function $$t: \sC^0 \to \bR_{>0}$$ we define an excision $\sT[t]$ of $\sT$ by excising (``scooping out") horoballs centred at various $\Gamma$-rational points at-infinity $\lambda$ and with radius $t(\lambda)$. We focus on these $\Gamma$-rational horoballs of $\sT$ because they have $\Gamma$-invariant boundary horospheres. Thus $\Gamma$ acts proper discontinuously on both $\sT[t]$ and $\del \sT[t]$, and we obtain the important diagonal action $$\Gamma \times \sT[t] \times \del \sT[t] \to \sT[t] \times \del \sT[t]. $$ We further emphasize those parameters $t$ which are sufficiently small such that the excisions $\sT[t]$  have a $\Gamma$-equivariant topological boundary $\del \sT[t]$ with the homotopy-type of $\sC$. This important fact implies a canonical equivariant isomorphism \begin{equation}\label{caniso}
 \bD\approx \tilde{H}_*(\del \sT[t]; \bZ).
 \end{equation} For the constructive topologist the $\Gamma$-action on $\sT$ is more accesible than the abstract algebraic action on $\bD$. The homologically essential spheres of $\sC$ can be viewed as spheres at-infinity within the excision $\sT[t]$. The $\Gamma$-orbit of these spheres and their singular chain sums generates an important topological $\bZ \Gamma$-module called the \emph{Steinberg module}. Following convention we designate the generator of this module a Steinberg symbol $B$. For further references to Steinberg (``modular") symbols, we refer the reader to \cite{manin}, \cite{AR}, \cite{AGM}, \cite{Stein}, \cite{Sol} and references therein. 
 
@@ -183,6 +185,8 @@ If we examine the usual metrics, we find the WP metric has properties (M1), (M2)
 
 %% Note: the following lemma does not establish M3 because the curves in the pants decomposition do not generate the sphere, but rather a face of the sphere, i.e. a filled simplex in the curve complex.
 
+\section{}
+
 \begin{lem}[Wolpert]
 Let $Q$ be a geodesic pants decomposition of the hyperbolic surface $(S,g)$. Let $\mathscr{Q}$ be the submanifold of $\sT$ passing through $(S,g)$, and such that the Nielsen twist tangents $t(a)$ vanish for every geodesic curve $a \in Q$. Then $\mathscr{Q}$ is a totally flat submanifold of $\sT$ having vanishing sectional curvatures with respect to the WP metric $d_{WP}$. 
 \end{lem}
@@ -194,7 +198,10 @@ Equivalently we find $\mathscr{Q}$ consists of all hyperbolic surfaces such that
 
 % The author does not know if (M3) holds, although \cite{FarbRank} appears to suggest otherwise. 
 
-Any metric $d$ satisfying the properties (M123) on $\sT$ readily leads to the construction of equivariant homotopy reductions of $\sT$ onto candidate spines $\sZ$ according to \cite{martel}. Specifically when (M3) holds, the Steinberg symbol $B$ canonically fills to a flat relative cycle $(P, \del P)$ in $(\sT[t], \del \sT[t])$, and these flat relative cycles $P=FILL[B]$ and their $\Gamma$-translates are called ``panels". The motivation for the terminology is given in \S \ref{CS} below. The panels are homologically nontrivial relative cycles in $\sT[t]$ modulo the boundary $\del \sT[t]$. In practice the condition (M3) could be slightly weakened since the application of our reduction to singularity method \cite{martel} does not strictly need the Steinberg symbols to admit flat-fillings -- what's essential is the geometric uniqueness of the fillings.
+
+\section{}
+
+Any metric $d$ satisfying the properties (M123) on $\sT$ readily leads to the construction of equivariant homotopy reductions of $\sT$ onto candidate spines $\sZ$ according to \cite{martel}. Specifically when (M3) holds, the Steinberg symbol $B$ canonically fills to a flat relative cycle $(P, \del P)$ in $(\sT[t], \del \sT[t])$. The flat relative cycles $P=FILL[B]$ and their $\Gamma$-translates are called ``panels". The motivation for the terminology is given in \S \ref{CS} below. The panels are homologically nontrivial relative cycles in $\sT[t]$ modulo the boundary $\del \sT[t]$. In practice the condition (M3) could be slightly weakened since the application of our reduction to singularity method \cite{martel} does not strictly need the Steinberg symbols to admit flat-fillings -- what's essential is the geometric uniqueness of the fillings.
 
 The following is important lemma for our method. 
 
