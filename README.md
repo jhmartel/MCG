@@ -1,4 +1,4 @@
-# Mapping Class Groups, Closing the Steinberg Symbol, and Spines.
+# Spines of Teichmueller Space and Mapping Class Groups of Closed Hyperbolic Surfaces. 
 
 [Updated 2023-12-12] 
 
