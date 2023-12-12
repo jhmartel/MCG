@@ -1,13 +1,11 @@
 # Mapping Class Groups, Closing the Steinberg Symbol, and Spines.
 
-[Updated 2023-12-09] 
+[Updated 2023-12-12] 
 
-This repository contains our projects on the Mapping Class Group of closed hyperbolic surfaces. This morning we have uploaded our draft article on constructing an equivariant spine for Teichmueller space of minimal dimension. We have finally assembled all our ideas into a coherent retraction, and we think it's quite interesting. Next step is to actually submit somewhere for publication. 
-
-
+This repository contains our projects on the Mapping Class Group of closed hyperbolic surfaces. The main article is our draft construction of a minimal dimension spine for Teichmueller space of closed hyperbolic surfaces. Currently the article is incomplete, with a technical proof for the Belt Tightening Lemma still needed. 
 
 
-
+# Old Readme Blurb
 The article MCG.pdf includes some of our research into the mapping class group of closed hyperbolic surfaces. We are looking to apply the reduction to singularity method from our PhD thesis to constructing equivariant spines for the Teichmueller space hyperbolic surfaces. To apply our reduction method requires we solve a computational subprogram we call "Closing the Steinberg Symbol" (CS). Solutions of Closing Steinberg (CS) are finite subsets I of MCG. 
 
 Using the python program curver of Mark C. Bell, we have successfully found some formal solutions to (CS) for the genus two case. These are included in the ClosingSteinbergGenusTwo.ipynb notebook.
