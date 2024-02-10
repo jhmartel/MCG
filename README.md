@@ -1,7 +1,7 @@
 # A New Spine for Teichmueller Space of Closed Hyperbolic Surfaces
 
 
-[Edited 2024-02-02]
+[Edited 2024-02-09]
 
 The problem of constructing a minimal dimension spine of Teichmueller space is interesting problem. We have been thinking about it for a long time, but recently during CMS 2023 in Montreal we were inspired to review it. In fact we think we finally understand exactly the codimension of the spine. It's directly related to the homology of the surface, i.e. 2g-1 is equal to dim H_1(S)-1 and this is no coincidence. 
 
