@@ -1,7 +1,6 @@
 # A New Spine for Teichmueller Space of Closed Hyperbolic Surfaces
 
-We announce that a minimal equivarient spine W for Teichmueller space Teich(S) consists of hyperbolic surfaces which are *homologically filled* by their shortest essential nonseparating geodesics. We thank MFB for comments on a previous proposal.
-This spine W is distinct from Thurston's proposal Th. 
+We announce that a minimal equivarient spine W for Teichmueller space Teich(S) consists of hyperbolic surfaces which are *homologically filled* by their shortest essential nonseparating geodesics. We thank MFB for comments on a previous proposal. This spine W is distinct from Thurston's proposal Th. 
 
 Our proposal obtains the optimal codimension, and we are amazed to see our construction finally explain the apparent numerical coincidence between dim H_1(S) -1 = 2g-1 and the precise codimension of the spine as predicted by the group cohomological formula dim Teich(S) - vcd MCG(S) = 2g-1, as demonstrated by Broaddus-Harer. 
 
